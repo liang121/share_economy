@@ -1,0 +1,179 @@
+<div ng-init="vm.init()"style="padding-left: 50px; padding-right: 50px;margin-top: 50px">
+
+    <div class="col-lg-12" style="margin-bottom:50px;z-index:100">
+        <div class="panel panel-default">
+            <div class="panel-heading"> Transfer List</div>
+            <div class="panel-body">
+                <div class="col-lg-5 ">
+                    <div class="col-lg-11" style="float:none;margin:0 auto">
+                        <div class="panel panel-default" style="border:0;">
+                            <table class=" table table-default" >
+                                <thead>
+                                <tr>
+                                    <th> &nbsp;&nbsp;Item </th>
+                                    <th></th>
+                                    <th>  </th>
+                                    <th> Cash </th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr style="font-size:13px" >
+                                    <td>
+
+                                    </td>
+                                    <td >
+                                        <div><a><img src="../server/public/picture/31t3CwdjAXL._AC_UL140_SR140,140_.jpg" height="100px" width="100px" class="img-thumbnail"></a></div>
+                                        <div><span style="color:firebrick"> Owned by </span><br><a>{{"you"}}</a></div>
+                                    </td>
+                                    <td class="col-lg-2"> <span class="glyphicon glyphicon-plus"></span> </td>
+                                    <td class="col-lg-4">
+                                        <!--<select ng-options="item for item in vm.quantity" ng-model="vm.itemQuantity">-->
+                                        <!--<option value="">-Select-</option>-->
+                                        <!--</select>-->
+                                        <div class="input-group">
+                                            <span class="input-group-addon">$</span>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <!--<div class="col-lg-11" style="font-size:13px;margin-top:15px">-->
+                            <!--<span><b>Back To Shopping Cart : </b>&nbsp;&nbsp;</span><a class="glyphicon glyphicon-shopping-cart" ng-click="vm.redirect($index)" style="font-size:17px"></a>-->
+                            <!--<span style="float:right;"> <b>Subtotal ({{2}} items):</b> <span style="color:firebrick">$ {{2594}}</span></span>-->
+                            <!--</div>-->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2" style="text-align:center">
+                    <div style="margin-top:50px">
+                        <span style="display:block">Transfer With</span>
+                        <span class="glyphicon glyphicon-transfer" style="font-size: 20px"></span>
+                    </div>
+                </div>
+                <div class="col-lg-5 ">
+                    <div class="col-lg-11" style="float:none;margin:0 auto">
+                        <div class="panel panel-default" style="border:0;">
+                            <table class=" table table-default" >
+                                <thead>
+                                <tr>
+                                    <th> &nbsp;&nbsp;Item </th>
+                                    <th></th>
+                                    <th></th>
+                                    <th> Cash </th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr style="font-size:13px" >
+                                    <td>
+                                        <div><a><img src="../server/public/picture/31vJcdObkcL._AC_SR160,160_.jpg" height="100px" width="100px" class="img-thumbnail"></a></div>
+                                    </td>
+                                    <td >
+                                        <div><a></a></div>
+                                        <div><span style="color:firebrick"> Owned by </span><br><a>{{"Tom Jason"}}</a></div>
+                                    </td>
+                                    <td class="col-lg-2"> <span class="glyphicon glyphicon-plus"></span> </td>
+                                    <td class="col-lg-4">
+                                        <!--<select ng-options="item for item in vm.quantity" ng-model="vm.itemQuantity">-->
+                                            <!--<option value="">-Select-</option>-->
+                                        <!--</select>-->
+                                        <div class="input-group">
+                                            <span class="input-group-addon">$</span>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <!--<div class="col-lg-11" style="font-size:13px;margin-top:15px">-->
+                            <!--<span><b>Back To Shopping Cart : </b>&nbsp;&nbsp;</span><a class="glyphicon glyphicon-shopping-cart" ng-click="vm.redirect($index)" style="font-size:17px"></a>-->
+                            <!--<span style="float:right;"> <b>Subtotal ({{2}} items):</b> <span style="color:firebrick">$ {{2594}}</span></span>-->
+                            <!--</div>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div style="margin-bottom: 10px;">
+        <div class="col-lg-12" style="margin:0 auto; float:none">
+            <uib-tabset active="active">
+                <uib-tab index="0" heading="Ship To">
+                    <div class="col-lg-5 div-center">
+                        <div class="input-group col-lg-12 div-center" style="margin-top:30px">
+                            <label>Full Name :</label>
+                            <input type="text" class="form-control" placeholder="Full Name" >
+                        </div>
+                        <div class="input-group col-lg-12 div-center" style="margin-top:20px">
+                            <label>Address Line 1 :</label>
+                            <input type="text" class="form-control" placeholder="Address Line 1"  >
+                        </div>
+                        <div class="input-group col-lg-12 div-center" style="margin-top:20px">
+                            <label>Address Line 2 :</label>
+                            <input type="text" class="form-control" placeholder="Address Line 2"  >
+                        </div>
+                        <div class="input-group col-lg-12 div-center" style="margin-top:20px">
+                            <label>City :</label>
+                            <input type="text" class="form-control" placeholder="City">
+                        </div>
+                        <div class="input-group col-lg-12 div-center" style="margin-top:20px">
+                            <label>State :</label>
+                            <input type="text" class="form-control" placeholder="State">
+                        </div>
+                        <div class="input-group col-lg-12 div-center" style="margin-top:20px">
+                            <label>Zip Code :</label>
+                            <input type="text" class="form-control" placeholder="Zip Code">
+                        </div>
+                        <div class="input-group col-lg-12 div-center" style="margin-top:20px">
+                            <label>Phone :</label>
+                            <input type="text" class="form-control" placeholder="Phone">
+                        </div>
+                        <div style="float:right">
+                            <button class="btn btn-default" style="margin-top:30px">Reset</button>
+                            <button type="submit" class="btn btn-default" style="margin-top:30px;margin-left:30px">Ship To This Address</button>
+                        </div>
+
+                    </div>
+
+                </uib-tab>
+                <uib-tab index="1" heading="Payment Confirmation">
+                    I've got an HTML heading, and a select callback. Pretty cool!
+                </uib-tab>
+                <uib-tab index="2" heading="Place Order">
+                    <div class="col-lg-10 div-center">
+                        <div class="col-lg-12 thumbnail" style="margin-top:30px; padding:50px 50px;height:200px;float:none">
+                            <div class="col-lg-4" >
+                                <div class="col-lg-5">
+                                    <div >
+                                        <img src="../server/public/picture/31vJcdObkcL._AC_SR160,160_.jpg" height="100px" width="100px" class="img-thumbnail">
+                                    </div>
+                                </div>
+                                <div class="col-lg-2">
+                                    <span class="vertical-center" style="height:90px">
+                                        <span class="glyphicon glyphicon-hand-right" style="color:#5dbe48;font-size: 20px"></span><br>
+                                        <!--<span class="glyphicon glyphicon-ok" ></span>-->
+                                    </span>
+                                </div>
+                                <div class="col-lg-5">
+                                    <div >
+                                        <img src="../server/public/picture/31vJcdObkcL._AC_SR160,160_.jpg" height="100px" width="100px" class="img-thumbnail">
+                                    </div>
+                                </div>
+                                <!--<span class="glyphicon glyphicon-ok"></span>-->
+                            </div>
+                            <div class="col-lg-8" style="font-size: 14px">
+                                <span>Congratulation, Transfer successfully with Tom Jason. You can return the item in 30 days.</span>
+                                <br>
+                                <span>Learn the <a style="color:orangered"> return policy</a></span>
+                                <br>
+                                <br>
+                                <button class="btn btn-default" style="display: block">Back To Shopping Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </uib-tab>
+            </uib-tabset>
+        </div>
+    </div>
+</div>

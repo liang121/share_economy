@@ -1,0 +1,20 @@
+
+<div class="row">
+    <div class="col-lg-10 div-center panel" style="margin-bottom: 30px">
+        <div class="panel-heading">
+            <span style="font-size: 18px; color:#5bc0de"> Log In </span>
+        </div>
+        <div class="panel-body">
+            <form role="form">
+                <div class="form-group">
+                    <input type="text" name="username" placeholder="Username..." class="form-control" id="form-username" ng-model="vm.signInObj.userName">
+                </div>
+                <div class="form-group">
+                    <input type="password" name="password" placeholder="Password..." class=" form-control" id="form-password" ng-model="vm.signInObj.password">
+                </div>
+                <button class="button btn btn-info col-lg-12" ng-click="vm.signIn()">Sign in </button>
+            </form>
+        </div>
+    </div>
+</div>
+

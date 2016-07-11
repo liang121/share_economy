@@ -1,0 +1,28 @@
+
+<div class="row">
+    <div class="col-lg-10 div-center panel" style="margin-bottom: 30px">
+        <div class="panel-heading">
+            <span style="font-size: 18px; color:#5bc0de"> Register Account </span>
+        </div>
+        <div class="panel-body">
+            <form role="form">
+                <div class="form-group">
+                    <input type="text" name="form-username" placeholder="Username..." class=" form-control" id="form-username" ng-model="vm.registerObj.userName">
+                </div>
+                <div class="form-group">
+                    <input type="email" name="form-email" placeholder="Email..." class=" form-control" id="form-email" ng-model="vm.registerObj.email">
+                </div>
+                <div class="form-group">
+                    <input type="password" name="form-password" placeholder="Password..." class="form-control" id="form-password" ng-model="vm.registerObj.password">
+                </div>
+                <div class="form-group">
+                    <input type="password" name="retypePassword" placeholder="Retype the Password..." class=" form-control" id="form-retype-password" ng-model="vm.registerObj.retypePassword">
+                </div>
+                <button type="submit" class="button btn btn-info col-lg-12" ng-click="vm.registerAccount()">Register Your Account</button>
+            </form>
+        </div>
+        <div class="panel-footer" style="background-color: white;padding-top: 20px;text-align: center">
+            <span>Already have one? click to <a style="color:#5bc0de;" ng-click="vm.closeModal('#register');vm.openModal('#signIn')">sign in</a> !</span>
+        </div>
+    </div>
+</div>
