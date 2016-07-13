@@ -2,6 +2,7 @@
 body html{
     margin:0 0;
     padidng:0 0;
+    overflow: hidden;
 }
 .navbar-default .navbar-nav>li>a {
     color:white;
@@ -38,7 +39,7 @@ body html{
 }
 .recent-view{
     float:none;
-    margin: 0 auto;
+    margin: 30px auto;
     height:200px
 }
 .recent-view-item-container  .panel{
@@ -55,7 +56,7 @@ body html{
 a {
     cursor: pointer;
     text-decoration: none;
-    color:black
+    color:#337ab7
 }
 a:hover{
     text-decoration: none;
@@ -102,6 +103,13 @@ a:hover{
 .shopping-cart .panel-footer{
     background-color: white;
 }
+.my-account  .edit-account-form button{
+    float:right;
+}
+/*.my-account  .panel-group  .panel {*/
+    /*border-left: 4px solid red;*/
+/*}*/
+
 /*.shopping-cart .list-group > li:hover{*/
     /*background-color: white;*/
 /*}*/

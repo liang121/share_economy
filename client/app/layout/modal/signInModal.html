@@ -12,7 +12,9 @@
                 <div class="form-group">
                     <input type="password" name="password" placeholder="Password..." class=" form-control" id="form-password" ng-model="vm.signInObj.password">
                 </div>
-                <button class="button btn btn-info col-lg-12" ng-click="vm.signIn()">Sign in </button>
+                <div style=""><span ng-show="true" style="color:red">Username or password is not correct</span>
+                    <br><span>Forget the username/password? Click to <a>retrieve</a></span></div>
+                <button class="button btn btn-info col-lg-12" ng-click="vm.signIn()" style="margin-top:5px">Sign in </button>
             </form>
         </div>
     </div>

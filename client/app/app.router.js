@@ -21,5 +21,9 @@
                     url: '/proceedCheckout',
                     template:'<proceed-checkout></proceed-checkout>'
                 })
+                .state('shareeconomy.myAccount',{
+                    url: '/myAccount',
+                    template:'<my-account></my-account>'
+                })
         })
 })()

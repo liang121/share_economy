@@ -12,7 +12,8 @@
         'app.layout',
         'app.homePage',
         'app.shoppingCart',
-        'app.proceedCheckout'
+        'app.proceedCheckout',
+        'app.myAccount'
         
     ])
 })();
