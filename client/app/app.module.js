@@ -13,7 +13,9 @@
         'app.homePage',
         'app.shoppingCart',
         'app.proceedCheckout',
-        'app.myAccount'
+        'app.myAccount',
+        'app.lists',
+        'app.ownedItems'
         
     ])
 })();

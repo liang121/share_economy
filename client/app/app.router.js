@@ -25,5 +25,9 @@
                     url: '/myAccount',
                     template:'<my-account></my-account>'
                 })
+                .state('shareeconomy.ownedItems',{
+                    url: '/yourItems',
+                    template:'<owned-items></owned-items>'
+                })
         })
 })()

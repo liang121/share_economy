@@ -5,7 +5,7 @@
     function layout(){
         return {
             restrict: 'E',
-            templateUrl: 'app/layout/layout.html',
+            templateUrl: 'app/feature/layout/layout.html',
             controllerAs: 'vm',
             controller: layoutCtrl,
             bindtoController: true

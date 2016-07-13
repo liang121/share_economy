@@ -5,7 +5,7 @@
     function homePage(){
         return{
             restrict: 'E',
-            templateUrl: 'app/homePage/homePage.html',
+            templateUrl: 'app/feature/homePage/homePage.html',
             controller: homePageCtrl,
             controllerAs: 'vm',
             bindToController: true

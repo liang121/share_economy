@@ -1,0 +1,244 @@
+<div ng-init="vm.init()" class="my-account">
+    <div style="width: 100%;height:160px;background-color: #f6f6f6;margin-top:-20px;border-bottom:1px solid #777">
+        <div class="col-lg-2" style="border-right:1px black solid;margin-top:10px;margin-left:20px">
+            <img
+                    src="../server/public/picture/Desktops_SBNV_Hero6_2016._CB297392653_.jpg"
+                    style="height:60%;border-radius: 50%;margin-left: 30px;margin-bottom: 10px"
+                    class="img-thumbnail"
+            >
+            <span style="display:block">MOYU LIANG'S ACCOUNT</span>
+        </div>
+        <div class="col-lg-2" style="margin-top: 10px">
+            <h4>Shopping Cart</h4>
+            <span style="display:block">Items: {{5}}</span>
+            <a style="margin-top: 20px" ui-sref='shareeconomy.shoppingCart'>Explore</a>
+        </div>
+        <div class="col-lg-2" style="margin-top: 10px">
+            <h4>Wish List</h4>
+            <span style="display:block">Items: {{11}}</span>
+            <a style="margin-top: 20px">Explore</a>
+        </div>
+        <div class="col-lg-2" style="margin-top: 10px">
+            <h4>Waiting List</h4>
+            <span style="display:block">Items: {{2}}</span>
+            <a style="margin-top: 20px">Explore</a>
+        </div>
+        <!--<div class="col-lg-2" style="margin-top: 10px">-->
+            <!--<h4>Your Items</h4>-->
+            <!--<span style="display:block">Items: {{2}}</span>-->
+            <!--<a style="margin-top: 20px">Explore</a>-->
+        <!--</div>-->
+        <div class="col-lg-1" style="margin-top: 10px;border-right:1px solid black;height:80%;">
+            <h4>On Order</h4>
+            <span style="display:block">Items: {{1}}</span>
+            <a style="margin-top: 20px">Explore</a>
+        </div>
+        <div class="col-lg-2" style="margin-top:20px;margin-left:20px">
+            <uib-rating ng-model="vm.rate" max="vm.max" read-only="true" on-hover="hoveringOver(value)" on-leave="overStar = null"></uib-rating>
+            <span class="label" ng-class="{'label-warning': percent<30, 'label-info': percent>=30 && percent<70, 'label-success': percent>=70}" ng-show="overStar && !isReadonly">{{percent}}%</span>
+            <pre style="margin:15px 0;">Overall Rate: <b>{{vm.rate}}</b> </pre>
+            <!--<button type="button" class="btn btn-sm btn-danger" ng-click="rate = 0" ng-disabled="isReadonly">Clear</button>-->
+            <!--<button type="button" class="btn btn-sm btn-default" ng-click="isReadonly = ! isReadonly">Toggle Readonly</button>-->
+        </div>
+    </div>
+    <div class="col-lg-10 div-center" style="margin-top:40px">
+        <div class="panel panel-default col-lg-7 div-center" style="border:none;float:none">
+            <div class="panel-heading">
+                Setting Account
+            </div>
+            <div class="panel-body">
+                <div class="group1">
+                    <uib-accordion>
+                        <uib-accordion-group is-open="vm.isOpen.login">
+                            <uib-accordion-heading>
+                                <span style="font-size: 13px">Login</span> <i style="font-size: 13px" class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
+                            </uib-accordion-heading>
+                            <div class="edit-account-form">
+                                <div class="col-lg-8" style="margin-left: 30px;">
+                                    <span>Username : liang121</span>
+                                    <button class="btn btn-xs btn-danger"><span>Edit</span></button>
+                                </div><br>
+                                <div class="col-lg-8" style="margin-top: 20px;margin-left: 30px;">
+                                    <span>Email : liangmoyu1@gmail.com</span>
+                                    <button class="btn btn-xs btn-danger"><span>Edit</span></button>
+                                </div><br>
+                                <div class="col-lg-8" style="margin-top: 20px;margin-left: 30px;">
+                                    <span>Password : <span>Password : ******</span></span>
+                                    <button class="btn btn-xs btn-danger"><span>Edit</span></button>
+                                </div><br>
+                                <div class="col-lg-8" style="margin-top: 20px;margin-left: 30px;">
+                                    <span>Phone # : 765-409-8999</span>
+                                    <button class="btn btn-xs btn-danger"><span>Edit</span></button>
+                                </div>
+                            </div>
+                        </uib-accordion-group>
+                    </uib-accordion>
+                </div>
+                <div class="group2">
+                    <uib-accordion>
+                        <uib-accordion-group is-open="vm.isOpen.manageShipTo">
+                            <uib-accordion-heading>
+                                <span style="font-size: 13px">Manage Ship Address</span> <i style="font-size: 13px" class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
+                            </uib-accordion-heading>
+                            <div class="edit-account-form">
+                                <div class="col-lg-8" style="margin-left: 30px;">
+                                    <span>Full Name : Moyu Liang</span>
+                                    <button class="btn btn-xs btn-danger"><span>Edit</span></button>
+                                </div><br>
+                                <div class="col-lg-8" style="margin-top: 20px;margin-left: 30px;">
+                                    <span>Address Line1 : 907 13th East Ave</span>
+                                    <button class="btn btn-xs btn-danger"><span>Edit</span></button>
+                                </div><br>
+                                <div class="col-lg-8" style="margin-top: 20px;margin-left: 30px;">
+                                    <span>Address Line2 : Password : Denver CO</span>
+                                    <button class="btn btn-xs btn-danger"><span>Edit</span></button>
+                                </div><br>
+                                <div class="col-lg-8" style="margin-top: 20px;margin-left: 30px;">
+                                    <span>City : Denver</span>
+                                    <button class="btn btn-xs btn-danger"><span>Edit</span></button>
+                                </div>
+                                <div class="col-lg-8" style="margin-top: 20px;margin-left: 30px;">
+                                    <span>Country : CO</span>
+                                    <button class="btn btn-xs btn-danger"><span>Edit</span></button>
+                                </div>
+                            </div>
+                        </uib-accordion-group>
+                    </uib-accordion>
+                </div>
+                <div class="group3">
+                    <uib-accordion>
+                        <uib-accordion-group is-open="vm.isOpen.managePaymentInfo">
+                            <uib-accordion-heading>
+                                <span style="font-size: 13px">Manage Pament Info</span> <i style="font-size: 13px" class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
+                            </uib-accordion-heading>
+                            <form role="form" class="edit-account-form">
+                                <div class="col-lg-8" style="margin-left: 30px;">
+                                    <span>Card holder : Moyu Liang</span>
+                                    <button class="btn btn-xs btn-danger"><span>Edit</span></button>
+                                </div><br>
+                                <div class="col-lg-8" style="margin-top: 20px;margin-left: 30px;">
+                                    <span>Card # : ********431</span>
+                                    <button class="btn btn-xs btn-danger"><span>Edit</span></button>
+                                </div><br>
+                            </form>
+                        </uib-accordion-group>
+                    </uib-accordion>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="col-lg-10 div-center" style="margin-top:40px">
+        <div class="panel panel-default col-lg-7 div-center" style="border:none;float:none">
+            <div class="panel-heading">
+                Personalization
+            </div>
+            <div class="panel-body">
+                <div class="group1">
+                    <uib-accordion>
+                        <uib-accordion-group is-open="vm.isOpen.purchaseHistory">
+                            <uib-accordion-heading>
+                                <span style="font-size: 13px">Trade History</span> <i style="font-size: 13px" class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
+                            </uib-accordion-heading>
+                            <div class="edit-account-form">
+                                <div class="col-lg-8" style="margin-left: 30px;">
+                                    <span>Item1 <span class="glyphicon glyphicon-transfer" style="margin:0 20px"></span> Bidding1 </span>
+                                    <button class="btn btn-xs btn-danger"><span>Detail</span></button>
+                                </div><br>
+                                <div class="col-lg-8" style="margin-top: 20px;margin-left: 30px;">
+                                    <span>Item2 + Item3 <span class="glyphicon glyphicon-transfer" style="margin:0 20px"></span> Bidding2 </span>
+                                    <button class="btn btn-xs btn-danger"><span>Detail</span></button>
+                                </div><br>
+                                <div class="col-lg-8" style="margin-top: 20px;margin-left: 30px;">
+                                    <span>Item4 + Item5 + $60 <span class="glyphicon glyphicon-transfer" style="margin:0 20px"></span> Bidding2 </span>
+                                    <button class="btn btn-xs btn-danger"><span>Detail</span></button>
+                                </div><br>
+                            </div>
+                        </uib-accordion-group>
+                    </uib-accordion>
+                </div>
+                <div class="group2">
+                    <uib-accordion>
+                        <uib-accordion-group is-open="vm.isOpen.ownedItems">
+                            <uib-accordion-heading>
+                                <span style="font-size: 13px">Manage Your Items</span> <i style="font-size: 13px" class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
+                            </uib-accordion-heading>
+                            <button class="btn btn-lg btn-danger" ng-show="false">Create Your Owned Factory</button>
+                            <button class="btn btn-group-sm btn-danger" ng-show="true" ui-sref='shareeconomy.ownedItems'>
+                                Go To Your Factory
+                            </button>
+                        </uib-accordion-group>
+                    </uib-accordion>
+                </div>
+                <div class="group3">
+                    <uib-accordion>
+                        <uib-accordion-group is-open="vm.isOpen.feedback">
+                            <uib-accordion-heading>
+                                <span style="font-size: 13px">Trading Feedback To Your</span> <i style="font-size: 13px" class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
+                            </uib-accordion-heading>
+                            <div class="edit-account-form">
+                                <div class="col-lg-12">
+                                    <div>
+                                        <span>Item1 <span class="glyphicon glyphicon-transfer" style="margin:0 10px"></span> Bidding1 </span>&nbsp;&nbsp;
+                                        <uib-rating ng-model="vm.rate" max="vm.max" read-only="true" on-hover="hoveringOver(value)" on-leave="overStar = null"></uib-rating>
+                                        <br><span>review By <a>YingYu Niu</a> on {{ "on April 25, 2013"}}</span>
+                                        <p style="font-size: 12px">The concept is so good but the actual movies (original/remake) have been so unbelievable bad?
+                                            If you like the actor Tom Welling, then that would be the only reason this movie is kinda, sorta,
+                                            worth watching.</p>
+                                        <hr/>
+                                    </div>
+                                    <div>
+                                        <span>Item2 + Item3 <span class="glyphicon glyphicon-transfer" style="margin:0 10px"></span> Bidding11 </span>&nbsp;&nbsp;
+                                        <uib-rating ng-model="vm.rate" max="vm.max" read-only="true" on-hover="hoveringOver(value)" on-leave="overStar = null"></uib-rating>
+                                        <br><span>review By <a>YingYu Niu</a> on {{ "on April 25, 2013"}}</span>
+                                        <p style="font-size: 12px">Had to chime in here due to the negative reviews.
+                                            The 2005 "The Fog" remake is a ghost story and it also becomes a love story with "Elizabeth,
+                                            " Maggie Grace, (not with "Nick Castle," Tom Welling, but with "Captain William Blake," Rade Sherbedgia),
+                                            becoming a key part of the movie and it's haunting ending, which remains a open question. We really do not
+                                            understand this love story and maybe this bothers some people.To me, Maggie Grace and Tom Welling did a great
+                                            job in the female and male leads of the movie.
+                                            The original "The Fog" was just a ghost story, and a good one, and I guess some people react to the changes in
+                                            the remake in a negative way. But to me, the changes in the story and the plot make this 2005 remake a strong,
+                                            enjoyable movie, with an open ending.
+                                            The original "The Fog" and the remake are two different movies, related but very different. I guess part of the
+                                            negativity by some reviewers is a response to these differences between the two films.
+                                            The soundtrack by Graeme Revell is one of the best I have ever heard, with many layered atmospheric electronic sounds.
+                                            At under 40 minutes this movie soundtrack comes in a little short on time, but not in the quality of the music.</p>
+                                        <hr/>
+                                    </div>
+                                </div><br>
+                            </div>
+                        </uib-accordion-group>
+                    </uib-accordion>
+                </div>
+                <div class="group4">
+                    <uib-accordion>
+                        <uib-accordion-group is-open="vm.isOpen.lists">
+                            <uib-accordion-heading>
+                                <span style="font-size: 13px">Manage Your List</span> <i style="font-size: 13px" class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
+                            </uib-accordion-heading>
+                            <div class="edit-account-form">
+                                <div class="col-lg-8" style="margin-left: 30px;">
+                                    <span>Wish List</span>
+                                    <button class="btn btn-xs btn-danger"><span>Edit</span></button>
+                                </div><br>
+                                <div class="col-lg-8" style="margin-top: 20px;margin-left: 30px;">
+                                    <span>Shopping Cart</span>
+                                    <button class="btn btn-xs btn-danger"><span>Edit</span></button>
+                                </div><br>
+                                <div class="col-lg-8" style="margin-top: 20px;margin-left: 30px;">
+                                    <span>Waiting List</span>
+                                    <button class="btn btn-xs btn-danger"><span>Edit</span></button>
+                                </div><br>
+                                <div class="col-lg-8" style="margin-top: 20px;margin-left: 30px;">
+                                    <span>On Order List</span>
+                                    <button class="btn btn-xs btn-danger"><span>Edit</span></button>
+                                </div>
+                            </div>
+                        </uib-accordion-group>
+                    </uib-accordion>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

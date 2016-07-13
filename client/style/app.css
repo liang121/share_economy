@@ -1,7 +1,7 @@
 
 body html{
     margin:0 0;
-    padidng:0 0;
+    padding:0 0;
     overflow: hidden;
 }
 .navbar-default .navbar-nav>li>a {
@@ -106,10 +106,37 @@ a:hover{
 .my-account  .edit-account-form button{
     float:right;
 }
-/*.my-account  .panel-group  .panel {*/
-    /*border-left: 4px solid red;*/
-/*}*/
-
+.my-account .group1  .panel-group  .panel {
+    border-left: 4px solid red;
+}
+.my-account .group2  .panel-group  .panel {
+    border-left: 4px solid brown;
+}
+.my-account .group3  .panel-group  .panel {
+    border-left: 4px solid green;
+}
+.my-account .group4  .panel-group  .panel {
+    border-left: 4px solid blue;
+}
+.owned-items pre{
+    padding: 5px 5px;
+    width:200px;
+    font-size: 12px;
+}
+.owned-items .progress{
+    padding:0px 0px;
+    height:20px;
+    margin-top: 5px;
+    overflow:visible !important;
+}
+.control-panel .glyphicon{
+    color:#337ab7;
+    display: block;
+    margin-top: 10px;
+}
+.shopping-cart .glyphicon-minus-sign{
+    color:#db524b;
+}
 /*.shopping-cart .list-group > li:hover{*/
     /*background-color: white;*/
 /*}*/

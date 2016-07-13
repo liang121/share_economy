@@ -5,7 +5,7 @@
     function proceedCheckout(){
         return {
             restrict: 'E',
-            templateUrl: 'app/proceedCheckout/proceedCheckout.html',
+            templateUrl: 'app/feature/proceedCheckout/proceedCheckout.html',
             controller: proceedCheckoutCtrl,
             controllerAs: 'vm',
             bindToController: true

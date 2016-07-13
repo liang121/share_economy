@@ -5,7 +5,7 @@
     function shoppingCart(){
         return {
             restrict: 'E',
-            templateUrl: 'app/shoppingCart/shoppingCart.html',
+            templateUrl: 'app/feature/shoppingCart/shoppingCart.html',
             controller: shoppingCartCtrl,
             controllerAs: 'vm',
             bindToController: true

@@ -51,6 +51,11 @@
                 <li >
                     <a href="#" ng-click="vm.openModal('#register')">Create Account</a>
                 </li>
+                <li >
+                    <a href="#" ui-sref='shareeconomy.messageCenter'>
+                        <span class="glyphicon glyphicon-envelope" style="font-size: 17px"><span class="badge" style="color:brown;font-size: 14px;">4</span></span>
+                    </a>
+                </li>
             </ul>
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
@@ -63,7 +68,7 @@
             box-id = "signIn"
             box-type = "top">
         <span class="glyphicon glyphicon-remove" style="float:right;cursor: pointer;" ng-click="vm.closeModal('#signIn')"></span>
-        <div class="lightbox-body" ng-include="'app/layout/modal/signInModal.html'"></div>
+        <div class="lightbox-body" ng-include="'app/feature/layout/modal/signInModal.html'"></div>
 
     </snap-lightbox>
 </div>
@@ -73,13 +78,13 @@
             box-type = "right"
             right-class='col-lg-4'>
         <span class="glyphicon glyphicon-remove" style="float:right;cursor: pointer;" ng-click="vm.closeModal('#register')"></span>
-        <div class="lightbox-body" ng-include="'app/layout/modal/registerModal.html'"></div>
+        <div class="lightbox-body" ng-include="'app/feature/layout/modal/registerModal.html'"></div>
 
     </snap-lightbox>
 </div>
 
-<div style="clear:both;margin-top:100px">
-    <nav class="navbar navbar-default" style="background-color:#777;margin-bottom:0px;margin-top:30px;width:100%">
+<div style="clear:both;margin-top:50px">
+    <nav class="navbar navbar-default" style="position:fixed;bottom:0px;background-color:#777;margin-bottom:0px;margin-top:30px;width:100%">
         <div class="container-fluid">
             <div class="navbar-header">
                 <a class="navbar-brand" href="#" style="color:white;font-size: 15px">

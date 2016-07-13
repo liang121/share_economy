@@ -10,7 +10,7 @@
                     <div >
                         {{item}}
                         <button
-                            class="btn btn-default"
+                            class="btn btn-primary"
                             style="float:right;font-size: 10px;padding:5px 8px"
                             ng-click="vm.addInterestingItems($index)"
                             ng-disabled="vm.totalTradeNum===0">
@@ -25,13 +25,13 @@
     <div class="col-lg-5 panel panel-default" style="margin-left: 4%;margin-right: 4%">
         <div class="panel-heading">
             trade panel
-            <button class="btn btn-default" style="margin-left: 20px" ng-click="vm.createNewTrade()">Create new trade</button>
+            <button class="btn btn-warning" style="margin-left: 20px" ng-click="vm.createNewTrade()">Create new trade</button>
             <div style="float:right">
-                <button class="btn btn-default" ng-click="vm.prev()" ng-disabled="vm.tradeIndex==0">Prev</button>
+                <button class="btn btn-warning" ng-click="vm.prev()" ng-disabled="vm.tradeIndex==0">Prev</button>
 
                 <span> &nbsp;Trade {{vm.tradeIndex+1}}&nbsp; </span>
 
-                <button class="btn btn-default" ng-click="vm.next()" ng-disabled="vm.tradeIndex==vm.totalTradeNum">Next</button>
+                <button class="btn btn-warning" ng-click="vm.next()" ng-disabled="vm.tradeIndex==vm.totalTradeNum">Next</button>
             </div>
 
         </div>
@@ -114,7 +114,7 @@
                 </tr>
             </table>
         </div>
-        <div class="panel-footer"><button class="btn btn-default" style="margin-left: 20px" ng-click="vm.redirect()">Proceed to checkout</button></div>
+        <div class="panel-footer"><button class="btn btn-success" style="margin-left: 20px" ng-click="vm.redirect()">Proceed to checkout</button></div>
     </div>
     <div class="col-lg-3 panel panel-default" style="">
         <div class="panel-heading">
@@ -129,7 +129,7 @@
                 <li class="list-group-item text-right">
                     <div >
                         <button
-                            class="btn btn-default"
+                            class="btn btn-primary"
                             style="float:left;font-size: 10px;padding:5px 8px"
                             ng-disabled="vm.totalTradeNum===0">
                             <span class="glyphicon glyphicon-arrow-left"></span>
@@ -145,7 +145,7 @@
                 <li ng-repeat='item in vm.ownedItems track by $index' class="list-group-item text-right">
                     <div >
                         <button
-                            class="btn btn-default"
+                            class="btn btn-primary"
                             style="float:left;font-size: 10px;padding:5px 8px"
                             ng-click="vm.addOwnedItems($index)"
                             ng-disabled="vm.totalTradeNum===0">
