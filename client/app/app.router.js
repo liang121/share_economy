@@ -29,5 +29,18 @@
                     url: '/yourItems',
                     template:'<owned-items></owned-items>'
                 })
+                .state('shareeconomy.messageCenter',{
+                    url: '/messageCenter',
+                    template:'<message-center></message-center>',
+                    abstract:true
+                })
+                .state('shareeconomy.messageCenter.inbox',{
+                    url: '/inbox',
+                    template:'<message-inbox></message-inbox>'
+                })
+                .state('shareeconomy.messageCenter.sent',{
+                    url: '/sent',
+                    template:'<message-sent></message-sent>'
+                })
         })
 })()

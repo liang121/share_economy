@@ -15,7 +15,7 @@
         'app.proceedCheckout',
         'app.myAccount',
         'app.lists',
-        'app.ownedItems'
-        
+        'app.ownedItems',
+        'app.messageCenter'
     ])
 })();

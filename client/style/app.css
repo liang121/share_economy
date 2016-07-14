@@ -137,6 +137,42 @@ a:hover{
 .shopping-cart .glyphicon-minus-sign{
     color:#db524b;
 }
+.message-center .sidebar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: white;
+
+}
+
+.message-center .sidebar ul li a {
+    display: block;
+    color: #000;
+    padding: 8px 0 8px 16px;
+    text-decoration: none;
+    border:2px solid #f1f1f1;
+}
+
+/* Change the link color on hover */
+.message-center .sidebar ul li a:hover {
+    background-color: #555;
+    color: white;
+}
+.message-center .table>tbody>tr>td{
+    border:none;
+}
+.message-center .table>tbody>tr{
+    border-top:1px solid #ddd;
+    cursor: pointer
+}
+.message-center a{
+    color:black;
+}
+.readed {
+    font-weight: bold;
+    background-color: #f8f8f8
+}
 /*.shopping-cart .list-group > li:hover{*/
     /*background-color: white;*/
 /*}*/

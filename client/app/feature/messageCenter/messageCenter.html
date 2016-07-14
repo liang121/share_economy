@@ -1,0 +1,24 @@
+<div class="container message-center" ng-init='vm.init()'>
+	<div class="col-lg-2" style="margin-top: 30px">
+		<div class="sidebar">
+			<ul>
+				<li><a ui-sref='shareeconomy.messageCenter.inbox'>Inbox</a></li>
+				<li><a ui-sref='shareeconomy.messageCenter.sent'>Sent</a></li>
+			</ul>
+		</div>
+		<div class="btn-group" style="margin-top: 30px">
+		    <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown">
+		    	All Messages <span class="caret"></span>
+		  	</button>
+		  	<ul class="dropdown-menu">
+		    	<li><a href="#">Last Week</a></li>
+		    	<li><a href="#">Last 30 Days</a></li>
+		    	<li><a href="#">UnRead</a></li>
+		    	<li><a href="#">All</a></li>
+		    </ul>
+		</div>
+	</div>
+	<div class="col-lg-9" style="margin-left:30px;margin-top:30px">
+		<div ui-view></div>
+	</div>
+</div>

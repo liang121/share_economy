@@ -1,7 +1,7 @@
 (function(){
     angular
         .module('app.homePage')
-        .directive('homePage',['$http','$state','shoppingCartService','snapLightboxService','$rootScope','$rootScope',homePage]);
+        .directive('homePage',['$http','$state','shoppingCartService','snapLightboxService','$rootScope',homePage]);
     function homePage(){
         return{
             restrict: 'E',

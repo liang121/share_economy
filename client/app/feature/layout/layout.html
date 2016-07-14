@@ -44,6 +44,7 @@
                         <li><a ui-sref="shareeconomy.shoppingCart">Shopping Cart</a></li>
                         <li><a href="#">Wish List</a></li>
                         <li><a href="#">Waiting List</a></li>
+                        <li><a ui-sref='shareeconomy.ownedItems'>Your Items</a></li>
                         <li class="divider"></li>
                         <li><a ui-sref="shareeconomy.myAccount">Manage Account</a></li>
                     </ul>
@@ -52,7 +53,7 @@
                     <a href="#" ng-click="vm.openModal('#register')">Create Account</a>
                 </li>
                 <li >
-                    <a href="#" ui-sref='shareeconomy.messageCenter'>
+                    <a href="#" ui-sref='shareeconomy.messageCenter.inbox'>
                         <span class="glyphicon glyphicon-envelope" style="font-size: 17px"><span class="badge" style="color:brown;font-size: 14px;">4</span></span>
                     </a>
                 </li>
@@ -83,8 +84,8 @@
     </snap-lightbox>
 </div>
 
-<div style="clear:both;margin-top:50px">
-    <nav class="navbar navbar-default" style="position:fixed;bottom:0px;background-color:#777;margin-bottom:0px;margin-top:30px;width:100%">
+<div style="clear:both;margin-top:50px;">
+    <nav class="navbar navbar-default" style="position:fixed;bottom:0px;background-color:#777;margin-bottom:0px;margin-top:30px;width:100%;z-index: 1000">
         <div class="container-fluid">
             <div class="navbar-header">
                 <a class="navbar-brand" href="#" style="color:white;font-size: 15px">
