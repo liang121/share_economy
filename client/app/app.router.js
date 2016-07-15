@@ -42,5 +42,9 @@
                     url: '/sent',
                     template:'<message-sent></message-sent>'
                 })
+                .state('shareeconomy.wishList',{
+                    url: '/wishList',
+                    template:'<wish-list></wish-list>'
+                })
         })
 })()

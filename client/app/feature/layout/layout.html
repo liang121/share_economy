@@ -17,7 +17,7 @@
                 <li ng-class="{'active': vm.link1Active === true}" ng-click="vm.link1Active = true;vm.link2Active=false;vm.link3Active=false"><a href="#">Link1</a></li>
                 <li ng-class="{'active': vm.link2Active === true}" ng-click="vm.link2Active = true;vm.link1Active=false;vm.link3Active=false"><a href="#">Link2</a></li>
                 <li ng-class="{'active': vm.link3Active === true}" ng-click="vm.link3Active = true;vm.link1Active=false;vm.link2Active=false"><a href="#">Link3</a></li>
-                <li class="dropdown">
+                <!-- <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li><a href="#">Action</a></li>
@@ -28,7 +28,7 @@
                         <li role="separator" class="divider"></li>
                         <li ><a href="#" >One more separated link</a></li>
                     </ul>
-                </li>
+                </li> -->
             </ul>
             <form class="navbar-form navbar-left" role="search">
                 <div class="form-group">
@@ -42,7 +42,7 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" ng-show="true"> My Account <span class="caret"></span></a>
                     <ul class="dropdown-menu" >
                         <li><a ui-sref="shareeconomy.shoppingCart">Shopping Cart</a></li>
-                        <li><a href="#">Wish List</a></li>
+                        <li><a ui-sref='shareeconomy.wishList'>Wish List</a></li>
                         <li><a href="#">Waiting List</a></li>
                         <li><a ui-sref='shareeconomy.ownedItems'>Your Items</a></li>
                         <li class="divider"></li>
@@ -61,6 +61,9 @@
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
 </nav>
+<!-- <div 
+     style="background-image: url(../server/public/picture/fish.jpg);height:400px;background-size:cover;margin-top: -20px;margin-bottom:100px">
+</div> -->
 <div  ui-view ></div>
 <br>
 

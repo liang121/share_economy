@@ -1,5 +1,11 @@
 <div ng-init="vm.init()" class="owned-items" >
-    <div class="col-lg-9" style="margin: 30px 30px">
+    <div class="col-lg-9" style="margin-bottom:100px;margin-left:30px">
+        <div style="float:right">
+            <button class="btn btn-sm btn-info">
+                Add New Item
+            </button>
+            <hr/>
+        </div>
         <div class="col-lg-12">
             <div class="progress col-lg-1">
                 <img src="../server/public/picture/31vJcdObkcL._AC_SR160,160_.jpg" style="width:100%" class="img-thumbnail">
@@ -8,7 +14,7 @@
                     Get Bidded
                 </div>
             </div>
-            <div class="col-lg-8" style="padding:10px 40px;font-size: 16px">
+            <div class="col-lg-7" style="padding:10px 40px;font-size: 16px">
                 <div>USB cable</div>
                 <div>item Id: 1002431</div>
                 <div style="font-size: 80%;margin-top:10px">
@@ -19,6 +25,8 @@
 
                         <label style="border-left:1px solid lightgrey;display:inline-block;padding-left: 10px">Bargain With:</label> <span>2 customers </span>
                         <br>
+                        <label style="display:inline-block;">Brand New Item in Market:</label> <span>18$ </span>
+                        <br>
                         <i
                             class="glyphicon"
                             style="cursor:pointer"
@@ -26,7 +34,6 @@
                             ng-class="{'glyphicon-chevron-down': vm.status.item1DetailOpen, 'glyphicon-chevron-right': !vm.status.item1DetailOpen}">
                         </i>
                         <label>Items Description</label>
-                        <!--<button class="btn btn-xs btn-info">Edit</button>-->
                         <br>
                         <panel class="col-lg-12" ng-show="vm.status.item1DetailOpen">
                             <ul>
@@ -52,10 +59,11 @@
                 <!--<pre>Added: 07/05/2016</pre>-->
                 <!--<pre>Modified: 07/12/2016</pre>-->
             </div>
-            <div class="col-lg-2">
-                <div style="margin-top:50px">
+            <div class="col-lg-3">
+                <div class="btn-group" style="margin-top:50px">
                     <button class="btn btn-xs btn-info">Edit</button>
-                    &nbsp;&nbsp;&nbsp;&nbsp;<button class="btn btn-xs btn-danger">Remove</button>
+                    <button class="btn btn-xs btn-danger">Remove</button>
+                    <button class="btn btn-xs btn-success">See Comments</button>
                 </div>
             </div>
         </div>
@@ -67,7 +75,7 @@
                     Get Sold
                 </div>
             </div>
-            <div class="col-lg-8" style="padding:10px 40px;font-size: 16px">
+            <div class="col-lg-7" style="padding:10px 40px;font-size: 16px">
                 <div>SD Card</div>
                 <div>item Id: 1021434</div>
                 <div style="font-size: 80%;margin-top:10px">
@@ -77,6 +85,8 @@
                         <label style="border-left:1px solid lightgrey;display:inline-block;padding-left: 10px">Collected By:</label> <span>5 customers </span>
 
                         <label style="border-left:1px solid lightgrey;display:inline-block;padding-left: 10px">Bargain With:</label> <span>2 customers </span>
+                        <br>
+                        <label style="display:inline-block;">Brand New Item in Market:</label> <span>18$ </span>
                         <br>
                         <i
                                 class="glyphicon"
@@ -111,10 +121,11 @@
                 <!--<pre>Added: 07/05/2016</pre>-->
                 <!--<pre>Modified: 07/12/2016</pre>-->
             </div>
-            <div class="col-lg-2">
-                <div style="margin-top:50px">
+            <div class="col-lg-3">
+                <div class="btn-group" style="margin-top:50px">
                     <button class="btn btn-xs btn-info">Edit</button>
-                    &nbsp;&nbsp;&nbsp;&nbsp;<button class="btn btn-xs btn-danger">Remove</button>
+                    <button class="btn btn-xs btn-danger">Remove</button>
+                    <button class="btn btn-xs btn-success">See Comments</button>
                 </div>
             </div>
         </div>
@@ -126,7 +137,7 @@
                     New Added
                 </div>
             </div>
-            <div class="col-lg-8" style="padding:10px 40px;font-size: 16px">
+            <div class="col-lg-7" style="padding:10px 40px;font-size: 16px">
                 <div>SD Card</div>
                 <div>item Id: 1021434</div>
                 <div style="font-size: 80%;margin-top:10px">
@@ -136,6 +147,8 @@
                         <label style="border-left:1px solid lightgrey;display:inline-block;padding-left: 10px">Collected By:</label> <span>5 customers </span>
 
                         <label style="border-left:1px solid lightgrey;display:inline-block;padding-left: 10px">Bargain With:</label> <span>2 customers </span>
+                        <br>
+                        <label style="display:inline-block;">Brand New Item in Market:</label> <span>18$ </span>
                         <br>
                         <i
                                 class="glyphicon"
@@ -170,10 +183,11 @@
                 <!--<pre>Added: 07/05/2016</pre>-->
                 <!--<pre>Modified: 07/12/2016</pre>-->
             </div>
-            <div class="col-lg-2">
-                <div style="margin-top:50px">
+            <div class="col-lg-3">
+                <div class="btn-group" style="margin-top:50px">
                     <button class="btn btn-xs btn-info">Edit</button>
-                    &nbsp;&nbsp;&nbsp;&nbsp;<button class="btn btn-xs btn-danger">Remove</button>
+                    <button class="btn btn-xs btn-danger">Remove</button>
+                    <button class="btn btn-xs btn-success">See Comments</button>
                 </div>
             </div>
         </div>
@@ -181,18 +195,18 @@
     <panel class='col-lg-2 wish-board'>
     <h7>Wish Board</h7>
     <hr/ style='margin-top: 1px'>
-    <ul class="fa-ul">
-        <li>
-            <i class="fa fa-bell faa-ring animated" style="color: red;cursor:pointer;"></i><span style="color: black;"> practically new Ipod</span>
+    <ul class="fa-ul list-group">
+        <li class="list-group-item" style="background-color:#337ab7">
+            <i class="fa fa-bell faa-ring animated faa-slow" style="color: red;cursor:pointer;"></i><span style="font-weight: bold;color:white"> practically new Ipod</span>
         </li>
-        <li>
+        <li class="list-group-item">
             <i class="fa fa-bell"></i><span> brand new laptop</span>
         </li>
-        <li>
+        <li class="list-group-item">
             <i class="fa fa-bell"></i> <span> flight tickes to China</span>
         </li>
-        <li>
-            <i class="fa fa-bell faa-ring animated" style="color: red;cursor:pointer;"></i> <span style="color: black;"> Play Dota in this Firady night</span>
+        <li class="list-group-item" style="background-color:#337ab7">
+            <i class="fa fa-bell faa-ring animated faa-slow" style="color: red;cursor:pointer;"></i> <span style="font-weight: bold;color:white"> Play Dota in this Firady night</span>
         </li>
     </ul>
     <hr/ style='margin-top: 50px'>
