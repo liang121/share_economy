@@ -70,18 +70,18 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-11 recent-view">
+        <div class="col-lg-11 recommend">
             <div class="panel panel-default">
                 <div class="panel-heading" style="background-color:#f7f7f7">
-                    <span>Wish List</span>&nbsp;&nbsp;&nbsp;&nbsp;
-                    <button class="btn btn-default"> Save Wish List</button>&nbsp;&nbsp;&nbsp;&nbsp;
-                    <button class="btn btn-default" ui-sref="shareeconomy.shoppingCart"> Go To Shopping Cart</button>
+                    <span>Recommend</span>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <button class="btn btn-info" ui-sref="shareeconomy.wishList"> Go To Wish List</button>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <button class="btn btn-info" ui-sref="shareeconomy.shoppingCart"> Go To Cart</button>
                     <span style="float:right">{{vm.currentWishListPage+1}} page / {{vm.pageLength}} pages</span>
                 </div>
-                <div class="panel-body recent-view-item-container" ng-show="!vm.isSignIn">
+                <div class="panel-body recommend-item-container" ng-show="vm.isSignIn">
                     <a href="#" ng-click="vm.openModal('#signIn')">Sign In </a>
                 </div>
-                <div class="panel-body recent-view-item-container" ng-show="vm.isSignIn">
+                <div class="panel-body recommend-item-container" ng-show="true">
 
                     <div class="col-lg-1">
                         <div class="vertical-center">
@@ -94,20 +94,21 @@
                             <div class="panel-heading">
                                 &nbsp;
                                 <a>Item {{$index+1}}</a>
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                <a class="glyphicon glyphicon-shopping-cart"
+                                <!-- &nbsp;&nbsp;&nbsp;&nbsp; -->
+                                <!-- <a class="glyphicon glyphicon-shopping-cart"
                                    ng-click="vm.addToShoppingCart(item.headerId)"
                                    ng-class="{'active-color-add': vm[item.headerId+'isAdd']===true}"
                                    uib-popover="{{(!vm[item.headerId+'isAdd'])?'add to':'delete from'}} cart"
                                    popover-trigger="mouseenter">
-                                </a>
+                                </a> -->
                                 &nbsp;
-                                <a class="glyphicon glyphicon-trash"
+                                <button class="btn btn-warning btn-xs">Move To Wish List</button>
+                                <!-- <a class="glyphicon glyphicon-trash"
                                    ng-click="vm.deleteWishListItems($index,item.headerId)"
                                    uib-popover="delete from wish list"
                                    popover-trigger="mouseenter">
 
-                                </a>
+                                </a> -->
                             </div>
                             <div class="panel-body">
                                 {{item.description}}

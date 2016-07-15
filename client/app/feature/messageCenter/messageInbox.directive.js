@@ -1,7 +1,7 @@
 (function(){
 	angular
 		.module('app.messageCenter')
-		.directive('messageInbox',[messageInbox]);
+		.directive('messageInbox',['$stateParams',messageInbox]);
 	function messageInbox(){
 		return {
 			restrict: 'E',
@@ -11,14 +11,14 @@
 			bindToController: true
 		}
 	}
-	function messageInboxCtrl($scope){
+	function messageInboxCtrl($scope,$stateParams){
 		var vm = this;
 		vm.init = init;
 		vm.getMessage = getMessage;
 		function init(){
 			vm.boxContents = [];
 			vm.templateId = 'inBox';
-			vm.getMessage('systemMessages');
+			vm.getMessage($stateParams.messageBoxType);
 			$scope.$watch('vm.boxContents',function(newVal,oldVal){
 				if(!angular.equals(newVal,oldVal)){
 					var i = 0;

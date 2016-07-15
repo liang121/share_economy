@@ -36,7 +36,16 @@
                 })
                 .state('shareeconomy.messageCenter.inbox',{
                     url: '/inbox',
-                    template:'<message-inbox></message-inbox>'
+                    template:'<message-inbox></message-inbox>',
+                    params: { messageBoxType: null, }
+                    // resolve:{
+                    //     // messageBoxType: ['$stateParams',function($stateParams){
+                    //     //     return $stateParams.messageBoxType;
+                    //     // }]
+                    //     messageBoxType: function($stateParams){
+                    //         return $stateParams.messageBoxType;
+                    //     }
+                    // }
                 })
                 .state('shareeconomy.messageCenter.sent',{
                     url: '/sent',

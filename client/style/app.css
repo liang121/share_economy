@@ -37,12 +37,12 @@ body html{
 .craigslist-item {
     border-right: 1px #ebebeb solid;
 }
-.recent-view{
+.recommend{
     float:none;
     margin: 30px auto;
     height:200px
 }
-.recent-view-item-container  .panel{
+.recommend-item-container  .panel{
     border:0;
 }
 .vertical-center{
@@ -123,6 +123,10 @@ a:hover{
     width:200px;
     font-size: 12px;
 }
+.owned-items .list-group-item{
+    border:0;
+    background:#f8f8f8;
+}
 .progress{
     padding:0px 0px;
     height:20px;
@@ -131,10 +135,11 @@ a:hover{
 }
 .wish-board {
     background-color: #f6f6f6;
-    position: fixed;
-    right:30px;
+    /*position: fixed;*/
     padding:10px 10px;
-    color:#b3b3b3
+    /*color:#b3b3b3;*/
+    margin-top: -20px;
+   /* margin-right: 0px*/
 }
 .wish-board.glyphicon{
     color:#337ab7;
