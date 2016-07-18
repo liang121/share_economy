@@ -9,6 +9,7 @@
   "author": "david liang",
   "license": "ISC",
   "dependencies": {
+    "angular-chart.js": "^1.0.0-alpha8",
     "body-parser": "^1.15.2",
     "express": "^4.14.0",
     "gulp": "^3.9.1",

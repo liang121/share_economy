@@ -2,6 +2,7 @@
     'use strict';
 
     angular.module('app',[
+        'chart.js',
         'ngAnimate',
         'ui.bootstrap',
         'ui.router',
@@ -16,6 +17,7 @@
         'app.myAccount',
         'app.lists',
         'app.ownedItems',
-        'app.messageCenter'
+        'app.messageCenter',
+        'app.visitorReview'
     ])
 })();

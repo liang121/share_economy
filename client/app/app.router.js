@@ -55,5 +55,9 @@
                     url: '/wishList',
                     template:'<wish-list></wish-list>'
                 })
+                .state('shareeconomy.visitorReview',{
+                    url: '/visitorReview',
+                    template:'<visitor-review></visitor-review>'
+                })
         })
 })()
