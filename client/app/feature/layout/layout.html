@@ -43,7 +43,7 @@
                     <ul class="dropdown-menu" >
                         <li><a ui-sref="shareeconomy.shoppingCart">Shopping Cart</a></li>
                         <li><a ui-sref='shareeconomy.wishList'>Wish List</a></li>
-                        <li><a href="#">Waiting List</a></li>
+                        <li><a ui-sref='shareeconomy.waitList'>Waiting List</a></li>
                         <li><a ui-sref='shareeconomy.ownedItems'>Dashboard</a></li>
                         <li class="divider"></li>
                         <li><a ui-sref="shareeconomy.myAccount">Manage Account</a></li>
@@ -64,7 +64,7 @@
 <!-- <div 
      style="background-image: url(../server/public/picture/fish.jpg);height:400px;background-size:cover;margin-top: -20px;margin-bottom:100px">
 </div> -->
-<div  ui-view ></div>
+<div  ui-view autoscroll="true"></div>
 <br>
 
 <div class="lightbox-container" >

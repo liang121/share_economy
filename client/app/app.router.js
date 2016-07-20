@@ -55,6 +55,10 @@
                     url: '/wishList',
                     template:'<wish-list></wish-list>'
                 })
+                .state('shareeconomy.waitList',{
+                    url: '/waitList',
+                    template:'<wait-list></wait-list>'
+                })
                 .state('shareeconomy.visitorReview',{
                     url: '/visitorReview',
                     template:'<visitor-review></visitor-review>'

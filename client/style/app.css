@@ -200,6 +200,9 @@ a:hover{
     font-weight: bold;
     background-color: #f8f8f8
 }
+.visitorReview .table>tbody>tr>td {
+    font-size: 14px
+}
 /*.shopping-cart .list-group > li:hover{*/
     /*background-color: white;*/
 /*}*/
