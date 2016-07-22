@@ -1,9 +1,17 @@
 (function(){
     angular.module('router',[])
         .config(function($locationProvider, $stateProvider, $urlRouterProvider){
-           // $urlRouterProvider.otherwise('shareeconomy/home');
+            $urlRouterProvider.otherwise('shareeconomy/home');
             $locationProvider.html5Mode(true);
             $stateProvider
+                .state('signIn',{
+                    url: '/signIn',
+                    template: '<sign-in></sign-in>'
+                })
+                .state('registerAccount',{
+                    url: '/register',
+                    template: '<register-account></register-account>'
+                })
                 .state('shareeconomy',{
                     url: '/shareeconomy',
                     template: '<layout></layout>',

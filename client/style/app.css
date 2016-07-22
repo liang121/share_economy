@@ -4,7 +4,10 @@ body html{
     padding:0 0;
     overflow: hidden;
 }
-.navbar-default .navbar-nav>li>a {
+.navbar{
+    margin-bottom: 0px;
+}
+.navbar-default .navbar-nav>li>a,.navbar-default .navbar-nav>li>a:focus{
     color:white;
 }
 .navbar-default .navbar-nav>li>a:hover {
@@ -22,6 +25,12 @@ body html{
 .sign-in li a:hover {
     background-color: #777 !important;
     color: white !important;
+}
+.form-error-message{
+    color:red;
+}
+.form-error-message ul>li{
+    padding:0 0;
 }
 .panel > .panel-heading {
     background-image: none;
@@ -138,7 +147,7 @@ a:hover{
     /*position: fixed;*/
     padding:10px 10px;
     /*color:#b3b3b3;*/
-    margin-top: -20px;
+    /*margin-top: -20px;*/
    /* margin-right: 0px*/
 }
 .wish-board.glyphicon{

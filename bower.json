@@ -21,6 +21,7 @@
     "angular-ui-router": "^0.3.1",
     "angular-animate": "^1.5.7",
     "font-awesome": "^4.6.3",
-    "font-awesome-animation": "^0.0.9"
+    "font-awesome-animation": "^0.0.9",
+    "ngstorage": "^0.3.10"
   }
 }

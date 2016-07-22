@@ -1,7 +1,7 @@
 (function(){
     angular
         .module('app.homePage')
-        .directive('homePage',['$http','$state','shoppingCartService','snapLightboxService','$rootScope',homePage]);
+        .directive('homePage',['$http','$state','shoppingCartService','snapLightboxService','$rootScope','$localStorage','utilService',homePage]);
     function homePage(){
         return{
             restrict: 'E',
@@ -10,7 +10,7 @@
             controllerAs: 'vm',
             bindToController: true
         }
-        function homePageCtrl($http,$state,shoppingCartService,snapLightboxService,$rootScope,$scope){
+        function homePageCtrl($http,$state,$localStorage,shoppingCartService,snapLightboxService,$rootScope,$scope,utilService){
             var vm = this;
             vm.init = init;
             vm.getItems = getItems;
@@ -20,6 +20,7 @@
             vm.deleteWishListItems = deleteWishListItems;
             vm.redirect = redirect;
             vm.openModal = openModal;
+            // vm.isCertified = isCertified;
             function init(){
                 vm.elecCompItems = [];
                 vm.autoIndItems = [];
@@ -28,12 +29,18 @@
                 vm.currentWishListPage = 0;
                 vm.wishListContainer = [];
                 vm.isAdd = false;
-                vm.isSignIn = false;
                 vm.getItems();
-                $scope.$on('hasSignedIn', function(event, args) {
-                    vm.isSignIn = true;
-                });
+                // $scope.$on('hasSignedIn', function(event, args) {
+                //     vm.isSignIn = true;
+                // });
             }
+            // function isCertified(){
+            //     if(!$localStorage.user) {
+            //         $state.go('shareeconomy.signIn');
+            //     }else{
+            //         $localStorage.user.isSigned = true;
+            //     }
+            // }
             function getItems(){
                 // $http.get('/elecCompItems').success(function(resp){
                 //     angular.copy(resp.response,vm.elecCompItems);

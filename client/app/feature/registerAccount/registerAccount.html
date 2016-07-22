@@ -1,0 +1,62 @@
+<div style="padding-top: 100px; background-image: url(../server/public/picture/background-7.jpg);background-size: cover; width:100%;height: 100%" ng-init='vm.init()'>
+    <div class="col-lg-5 div-center panel">
+        <div class="panel-heading">
+            <span style="font-size: 18px; color:#5bc0de"> Register Account </span>
+        </div>
+        <div class="panel-body">
+            <form role="form" name="registerForm" novalidate>
+                <div class="form-group">
+                    <input type="text"
+                           name="regUsername"
+                           placeholder="Username..."
+                           class=" form-control"
+                           id="form-username"
+                           ng-model="vm.registerObj.userName"
+                           ng-focus="vm.isSubmitted=false"
+                           required>
+                </div>
+                <div class="form-group">
+                    <input type="email"
+                           name="regEmail"
+                           placeholder="Email..."
+                           class=" form-control"
+                           id="form-email"
+                           ng-model="vm.registerObj.email"
+                           ng-focus="vm.isSubmitted=false"
+                           required>
+                </div>
+                <div class="form-group">
+                    <input type="password"
+                           name="regPassword"
+                           placeholder="Password..."
+                           class="form-control"
+                           id="form-password"
+                           ng-model="vm.registerObj.password"
+                           ng-focus="vm.isSubmitted=false"
+                           required>
+                </div>
+                <div class="form-group">
+                    <input type="password"
+                           name="regRetypePassword"
+                           placeholder="Retype the Password..."
+                           class=" form-control"
+                           id="form-retype-password"
+                           ng-model="vm.registerObj.retypePassword"
+                           ng-focus="vm.isSubmitted=false"
+                           required>
+                </div>
+                <div class="form-error-message" ng-show="vm.isSubmitted">
+                    <ul>
+                        <li ng-show="registerForm.$error.required">All fields are required</li>
+                        <li ng-show="registerForm.regEmail.$error.email">Email type is not correct</li>
+                        <li ng-show="vm.retypeUncorrect">Please retype correct password</li>
+                    </ul>
+                </div>
+            </form>
+            <button type="submit" class="button btn btn-info col-lg-12" ng-click="vm.registerAccount(registerForm)">Register Your Account</button>
+        </div>
+        <div class="panel-footer" style="background-color: white;padding-top: 20px;text-align: center">
+            <span>Already have one? click to <a style="color:#5bc0de;" ui-sref="signIn">sign in...</a></span>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,26 @@
+<div style="padding-top: 100px; background-image: url(../server/public/picture/background-7.jpg);background-size: cover; width:100%;height:100%" ng-init='vm.init()'>
+    <div class="col-lg-5 div-center panel" style="margin-bottom: 30px">
+        <div class="panel-heading">
+            <span style="font-size: 18px; color:#5bc0de"> Log In </span>
+        </div>
+        <div class="panel-body">
+            <form role="form">
+                <div class="form-group">
+                    <input type="text" name="username" placeholder="Username..." class="form-control" id="form-username" ng-model="vm.signInObj.userName">
+                </div>
+                <div class="form-group">
+                    <input type="password" name="password" placeholder="Password..." class=" form-control" id="form-password" ng-model="vm.signInObj.password">
+                </div>
+                <div><a ng-click="vm.asTourist()">Travel as a tourist...</a></div>
+                <div><span ng-show="!vm.pass" style="color:red">Username or password is not correct</span>
+                    <br><span>Forget the username/password? Click to <a>retrieve</a></span></div>
+                <button class="button btn btn-info col-lg-12" ng-click="vm.signIn()" style="margin-top:5px;margin-bottom:10px;float:none">Sign in </button>
+
+                <hr/>
+
+                <button class="button btn btn-warning col-lg-12" ui-sref="registerAccount" style="margin-top:5px">Create New Account </button>
+            </form>
+            <br><br>
+        </div>
+    </div>
+</div>

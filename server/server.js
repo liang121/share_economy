@@ -7,6 +7,8 @@ var bodyParser = require('body-parser');
 app.use(express.static('../client/'))
 app.use(express.static('../'));
 app.use('/shareeconomy/*', express.static('../client/index.html'));
+app.use('/signIn', express.static('../client/index.html'));
+app.use('/register', express.static('../client/index.html'));
 app.use(bodyParser.json());
 
 // app.get('/economyInfo',function(req,res){
@@ -23,6 +25,7 @@ app.use(bodyParser.json());
 //     });
 // })
 app.post('/registerAccount', function(req,res){
+    console.log('this is register');
     db.userInfo.insert(req.body,function(err,doc){
         if(err){
             res.json(err);
@@ -33,13 +36,17 @@ app.post('/registerAccount', function(req,res){
 })
 app.post('/signIn',function(req,res){
     var obj = req.body;
+    console.log('signIn post');
     db.userInfo.findOne({userName:obj.userName},function(err,doc){
         if(err){
             res.json(err);
+            console.log('signIn fail');
         }else{
+            console.log('signIn success');
             if(doc){
                 if(doc.password === obj.password){
-                    res.json('signIn successfully');
+                    doc.status = 'success';
+                    res.json(doc);
                 }else{
                     res.json('password not correct');
                 }
