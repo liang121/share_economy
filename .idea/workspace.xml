@@ -2,46 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="47ea5d3a-da03-416c-9d20-3526adb196a3" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/feature/signIn/modal/retrieveModal.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/angular-chart.js/dist/angular-chart.js.tar.gz" afterPath="$PROJECT_DIR$/node_modules/angular-chart.js/dist/angular-chart.js.tar.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/angular/angular.min.js.gzip" afterPath="$PROJECT_DIR$/node_modules/angular/angular.min.js.gzip" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/feature/layout/layout.directive.js" afterPath="$PROJECT_DIR$/client/app/feature/layout/layout.directive.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/feature/layout/layout.html" afterPath="$PROJECT_DIR$/client/app/feature/layout/layout.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/feature/lists/waitList.html" afterPath="$PROJECT_DIR$/client/app/feature/lists/waitList.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/feature/registerAccount/registerAccount.directive.js" afterPath="$PROJECT_DIR$/client/app/feature/registerAccount/registerAccount.directive.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/feature/registerAccount/registerAccount.html" afterPath="$PROJECT_DIR$/client/app/feature/registerAccount/registerAccount.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/feature/signIn/signIn.directive.js" afterPath="$PROJECT_DIR$/client/app/feature/signIn/signIn.directive.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/feature/signIn/signIn.html" afterPath="$PROJECT_DIR$/client/app/feature/signIn/signIn.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/index.html" afterPath="$PROJECT_DIR$/client/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/style/app.css" afterPath="$PROJECT_DIR$/client/style/app.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/angular-chart.js/.jscsrc" afterPath="$PROJECT_DIR$/node_modules/angular-chart.js/.jscsrc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/angular-chart.js/.jshintignore" afterPath="$PROJECT_DIR$/node_modules/angular-chart.js/.jshintignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/angular-chart.js/.jshintrc" afterPath="$PROJECT_DIR$/node_modules/angular-chart.js/.jshintrc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/angular-chart.js/.npmignore" afterPath="$PROJECT_DIR$/node_modules/angular-chart.js/.npmignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/angular-chart.js/Dockerfile" afterPath="$PROJECT_DIR$/node_modules/angular-chart.js/Dockerfile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/angular-chart.js/README.md" afterPath="$PROJECT_DIR$/node_modules/angular-chart.js/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/angular-chart.js/angular-chart.js" afterPath="$PROJECT_DIR$/node_modules/angular-chart.js/angular-chart.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/angular-chart.js/bower.json" afterPath="$PROJECT_DIR$/node_modules/angular-chart.js/bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/angular-chart.js/dist/angular-chart.js" afterPath="$PROJECT_DIR$/node_modules/angular-chart.js/dist/angular-chart.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/angular-chart.js/dist/angular-chart.min.js" afterPath="$PROJECT_DIR$/node_modules/angular-chart.js/dist/angular-chart.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/angular-chart.js/dist/angular-chart.min.js.map" afterPath="$PROJECT_DIR$/node_modules/angular-chart.js/dist/angular-chart.min.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/angular-chart.js/examples/amd.html" afterPath="$PROJECT_DIR$/node_modules/angular-chart.js/examples/amd.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/angular-chart.js/examples/app.js" afterPath="$PROJECT_DIR$/node_modules/angular-chart.js/examples/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/angular-chart.js/examples/charts.html" afterPath="$PROJECT_DIR$/node_modules/angular-chart.js/examples/charts.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/angular-chart.js/examples/charts.template.html" afterPath="$PROJECT_DIR$/node_modules/angular-chart.js/examples/charts.template.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/angular-chart.js/gulpfile.js" afterPath="$PROJECT_DIR$/node_modules/angular-chart.js/gulpfile.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/angular-chart.js/package.json" afterPath="$PROJECT_DIR$/node_modules/angular-chart.js/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/angular-chart.js/test/fixtures/charts.js" afterPath="$PROJECT_DIR$/node_modules/angular-chart.js/test/fixtures/charts.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/angular-chart.js/test/fixtures/coverage.js" afterPath="$PROJECT_DIR$/node_modules/angular-chart.js/test/fixtures/coverage.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/angular-chart.js/test/test.integration.js" afterPath="$PROJECT_DIR$/node_modules/angular-chart.js/test/test.integration.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/angular-chart.js/test/test.unit.js" afterPath="$PROJECT_DIR$/node_modules/angular-chart.js/test/test.unit.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/angular/angular.js" afterPath="$PROJECT_DIR$/node_modules/angular/angular.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/angular/angular.min.js" afterPath="$PROJECT_DIR$/node_modules/angular/angular.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/angular/angular.min.js.map" afterPath="$PROJECT_DIR$/node_modules/angular/angular.min.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/angular/bower.json" afterPath="$PROJECT_DIR$/node_modules/angular/bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/angular/package.json" afterPath="$PROJECT_DIR$/node_modules/angular/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/server.js" afterPath="$PROJECT_DIR$/server/server.js" />
     </list>
     <ignored path="Bucky.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -73,7 +35,7 @@
         <entry file="file://$PROJECT_DIR$/client/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="285">
-              <caret line="19" column="58" selection-start-line="19" selection-start-column="58" selection-end-line="19" selection-end-column="58" />
+              <caret line="20" column="58" selection-start-line="20" selection-start-column="58" selection-end-line="20" selection-end-column="58" />
               <folding />
             </state>
           </provider>
@@ -1190,12 +1152,12 @@
       <workItem from="1469055616765" duration="168000" />
       <workItem from="1469060922499" duration="51374000" />
       <workItem from="1469552528874" duration="432000" />
-      <workItem from="1469553125923" duration="5381000" />
+      <workItem from="1469553125923" duration="5679000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="235367000" />
+    <option name="totallyTimeSpent" value="235665000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="30" y="23" width="1410" height="877" extended-state="6" />
@@ -1210,7 +1172,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Mongo Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.054715622" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23056653" sideWeight="0.49707603" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.51910406" sideWeight="0.49707603" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1995614" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1454,7 +1416,7 @@
     <entry file="file://$PROJECT_DIR$/client/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
-          <caret line="19" column="58" selection-start-line="19" selection-start-column="58" selection-end-line="19" selection-end-column="58" />
+          <caret line="20" column="58" selection-start-line="20" selection-start-column="58" selection-end-line="20" selection-end-column="58" />
           <folding />
         </state>
       </provider>
