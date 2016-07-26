@@ -1,19 +1,24 @@
 <div ng-init="vm.init()">
-    <nav class="navbar navbar-default " style="background-color:#777;">
-        <div class="container-fluid">
+    <nav class="navbar navbar-default " style="background-color:#2d3436;">
+        <div class="container-fluid col-lg-12" style="padding:0px 0px;height:100px">
             <!-- Brand and toggle get grouped for better mobile display -->
-            <div>
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"  aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" ui-sref="shareeconomy.home"><span class="glyphicon glyphicon-leaf" style="font-size: 20px"></span></a>
+            <div style="color:white;padding:15px 15px;background-color:#1d2224;height:100px" class="col-lg-2">
+                <!--<button type="button" class="navbar-toggle collapsed" data-toggle="collapse"  aria-expanded="false">-->
+                    <!--<span class="sr-only">Toggle navigation</span>-->
+                    <!--<span class="icon-bar"></span>-->
+                    <!--<span class="icon-bar"></span>-->
+                    <!--<span class="icon-bar"></span>-->
+                <!--</button>-->
+                <div>
+                    <span style="font-size: 30px;font-weight: 900;font-style: italic;color:orangered">X</span>
+                    <span style="font-size: 20px;font-weight: 800">change</span>
+                    <span style="font-size:13px;display: block">Free exchange, save your money</span>
+                </div>
+                <!--<a class="navbar-brand" ui-sref="shareeconomy.home"><span class="glyphicon glyphicon-leaf" style="font-size: 20px"></span></a>-->
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" >
+            <div class="col-lg-10" id="bs-example-navbar-collapse-1" style="background-color: #3c4649">
                 <!-- <ul class="nav navbar-nav ">
                     <li ng-class="{'active': vm.link1Active === true}" ng-click="vm.link1Active = true;vm.link2Active=false;vm.link3Active=false"><a href="#">Link1</a></li>
                     <li ng-class="{'active': vm.link2Active === true}" ng-click="vm.link2Active = true;vm.link1Active=false;vm.link3Active=false"><a href="#">Link2</a></li>
@@ -31,15 +36,9 @@
                         </ul>
                     </li>
                 </ul> -->
-                <form class="navbar-form navbar-left" role="search">
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Search">
-                    </div>
-                    <button type="submit" class="btn btn-default">Submit</button>
-                </form>
                 <ul class="nav navbar-nav navbar-right ng-class='{sign-in:true}'">
                     <li>
-                        <a ui-sref='signIn' ng-show="!vm.isUser">Sign In </a>
+                        <a ui-sref='signIn' ng-show="!vm.isUser"><i class="fa fa-sign-in"></i> &nbsp;Sign In</a> </a>
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" ng-show="vm.isUser"> {{vm.userName}} <span class="caret"></span></a>
                         <ul class="dropdown-menu" >
                             <li><a ui-sref="shareeconomy.shoppingCart">Shopping Cart</a></li>
@@ -50,24 +49,63 @@
                             <li><a ui-sref="shareeconomy.myAccount">Manage Account</a></li>
                         </ul>
                     </li>
-                    <li >
-                        <a ui-sref="registerAccount" ng-show="!vm.isUser">Create Account</a>
+                    <li ng-show="!vm.isUser">
+                        <a ui-sref="registerAccount" ><i class="fa fa-plus-square"></i> &nbsp;Create Account</a>
                     </li>
-                    <li >
-                        <a ui-sref="signIn" ng-show="vm.isUser" ng-click="vm.logout()">Log out</a>
+                    <li ng-show="vm.isUser">
+                        <a ui-sref="signIn"  ng-click="vm.logout()">Log out</a>
                     </li>
-                    <!--<li >-->
-                        <!--<a href="#" ui-sref='shareeconomy.messageCenter.inbox'>-->
-                            <!--<span class="glyphicon glyphicon-envelope" style="font-size: 17px"><span class="badge" style="color:brown;font-size: 14px;">4</span></span>-->
-                        <!--</a>-->
-                    <!--</li>-->
+                    <li ng-show="vm.isUser">
+                        <a href="#" ui-sref='shareeconomy.messageCenter.inbox'>
+                            <span class="glyphicon glyphicon-envelope" style="font-size: 17px"><span class="badge" style="color:brown;font-size: 14px;">4</span></span>
+                        </a>
+                    </li>
                 </ul>
             </div><!-- /.navbar-collapse -->
+            <div class="col-lg-4">
+                <form class="navbar-form navbar-left" role="search">
+                    <div class="input-group">
+                        <span class="input-group-addon" style="cursor:pointer" ng-click="vm.openSearchSection = !vm.openSearchSection">All &#9656;</span><!--&#9654;-->
+                        <input type="text" class="form-control" style="width: 250px" placeholder="Search Item...">
+                        <span class="input-group-addon" style="background-color:#56bfe0;color:white"><i class="fa fa-search" aria-hidden="true"></i></span>
+                    </div>
+                </form>
+            </div>
         </div><!-- /.container-fluid -->
     </nav>
+    <section ng-show="vm.openSearchSection" style="" class="col-lg-12 animate-show search-area">
+        <h4>Search Area</h4>
+        <div class="form-group col-lg-3" style="padding: 10px 5px">
+            <input type="number" class="form-control" placeholder="Zip Number...">
+        </div>
+        <div class="form-group col-lg-3" style="padding: 10px 5px">
+            <input type="text" class="form-control" placeholder="City">
+        </div>
+        <div class="form-group col-lg-3" style="padding: 10px 5px">
+            <input type="text" class="form-control" placeholder="State">
+        </div>
+        <div class="form-group col-lg-3" style="padding: 10px 5px">
+            <select class="form-control">
+                <option>-choose condition-</option>
+                <option>brand new</option>
+                <option>inbox new</option>
+                <option>almost new</option>
+                <option>good condition</option>
+                <option>non-functional</option>
+            </select>
+        </div>
+        <button class="btn btn-info btn-xl" style="float:right" ng-click="vm.saveSearchArea()">Save</button>
+    </section>
+    <div class="col-lg-12 tab">
+        <ul style="list-style-type: none;padding:0px 0px">
+            <li>REAL ITEMS</li>
+            <li>VIRTUAL ITEMS</li>
+        </ul>
+    </div>
     <!-- <div
          style="background-image: url(../server/public/picture/fish.jpg);height:400px;background-size:cover;margin-top: -20px;margin-bottom:100px">
     </div> -->
+    &nbsp;
     <div  ui-view ></div>
     <br>
 
@@ -92,7 +130,8 @@
     </div>
 
     <div style="clear:both;">
-        <nav class="navbar navbar-default" style="position:fixed;bottom:0px;background-color:#777;margin-bottom:0px;width:100%;">
+        <nav class="navbar navbar-default" style="position:fixed;bottom:0px;background-color:#2d3436
+;margin-bottom:0px;width:100%;">
             <div class="container-fluid">
                 <div class="navbar-header">
                     <a class="navbar-brand" href="#" style="color:white;font-size: 15px">

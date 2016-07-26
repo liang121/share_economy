@@ -13,7 +13,7 @@
                 </div>
                 <div><a ng-click="vm.asTourist()">Travel as a tourist...</a></div>
                 <div><span ng-show="!vm.pass" style="color:red">Username or password is not correct</span>
-                    <br><span>Forget the username/password? Click to <a>retrieve</a></span></div>
+                    <br><span>Forget the username/password? Click to <a ng-click="vm.openModal('#retrieve')">retrieve</a></span></div>
                 <button class="button btn btn-info col-lg-12" ng-click="vm.signIn()" style="margin-top:5px;margin-bottom:10px;float:none">Sign in </button>
 
                 <hr/>
@@ -23,4 +23,13 @@
             <br><br>
         </div>
     </div>
+</div>
+<div class="lightbox-container" >
+    <snap-lightbox
+            box-id = "retrieve"
+            box-type = "right"
+            right-class='col-lg-4'>
+        <span class="glyphicon glyphicon-remove" style="float:right;cursor: pointer;" ng-click="vm.closeModal('#retrieve')"></span>
+        <div class="lightbox-body" ng-include="'app/feature/signIn/modal/retrieveModal.html'"></div>
+    </snap-lightbox>
 </div>

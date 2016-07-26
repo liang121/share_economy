@@ -15,20 +15,25 @@
         var vm = this;
         vm.init = init;
         vm.registerAccount = registerAccount;
-        vm.isSubmitted = false;
+
         function init(){
             vm.registerObj = {};
+            vm.isSubmitted = false;
+
         }
         function registerAccount(form){
-            console.log(form);
             vm.isSubmitted = true;
             if(vm.registerObj.password !== vm.registerObj.retypePassword){
                 vm.retypeUncorrect = true;
+            }else{
+                vm.retypeUncorrect = false;
             }
-            if(form.$valid){
+            if(form.$valid&&!vm.retypeUncorrect){
                 vm.registerObj.role = 'user';
-                $http.post('registerAccount',vm.registerObj).then(function(req,res){
-                    console.log(vm.registerObj);
+                $http.post('api/registerAccount',vm.registerObj).then(function(res){
+                    if(res.status===200){
+                        vm.showSuccessAlert = true;
+                    }
                 })
             }
         }

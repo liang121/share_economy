@@ -1,7 +1,7 @@
 (function(){
 	angular
 		.module('app.signIn')
-		.directive('signIn',['$localStorage','$state','$http',signIn]);
+		.directive('signIn',['$localStorage','$state','$http','snapLightboxService','$rootScope',signIn]);
 	function signIn(){
 		return {
 			restrict: 'E',
@@ -11,18 +11,23 @@
 			bindToController: true
 		}
 	}
-	function signInCtrl($localStorage,$state,$http){
+	function signInCtrl($localStorage,$state,$http,snapLightboxService,$rootScope){
 		var vm = this;
 		vm.init = init;
 		vm.signIn = signIn;
 		vm.asTourist = asTourist;
+		vm.openModal = openModal;
+		vm.closeModal = closeModal;
+		vm.continued = continued;
 		function init(){
 			vm.storage = $localStorage;
 			vm.pass = true;
 			vm.signInObj = {};
+			vm.chooseEmail = true;
+			vm.isContinued = false;
 		}
 		function signIn(){
-			$http.post('signIn',vm.signInObj).then(function(res){
+			$http.post('api/signIn',vm.signInObj).then(function(res){
                 if( res.data.status === 'success'){
                     // $rootScope.$broadcast('hasSignedIn');
                     // snapLightboxService.close($rootScope,'#signIn');
@@ -37,6 +42,15 @@
 			$state.go('shareeconomy.home');
 			$localStorage.user = {};
 			$localStorage.user.role = 'tourist';
+		}
+		function openModal(modalId){
+			snapLightboxService.open($rootScope,modalId);
+		}
+		function closeModal(modalId){
+			snapLightboxService.close($rootScope,modalId);
+		}
+		function continued(){
+			vm.isContinued = true;
 		}
 	}
 })();

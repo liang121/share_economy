@@ -1,0 +1,25 @@
+<div class="row">
+    <div class="col-lg-10 div-center panel" style="margin-bottom: 30px">
+        <div class="panel-heading">
+            <span style="font-size: 18px; color:#5bc0de"> Retrieve Username/Password </span><br><br>
+            <span style="font-size:13px; color:#777">Enter the email address or mobile phone number associated with your Amazon account.</span>
+        </div>
+        <div class="panel-body">
+            <form role="form">
+                <label style="padding-right: 5px;cursor: pointer" ng-class="{'label-active':vm.chooseEmail}" ng-click="vm.chooseEmail=true">Email</label>
+                <label style="padding-left: 5px;cursor: pointer" ng-class="{'label-active':!vm.chooseEmail}" ng-click="vm.chooseEmail=false">Mobile Number</label>
+                <div class="form-group" ng-show="!vm.chooseEmail">
+                    <input type="number" name="retrieveNumber" placeholder="Mobile Number..." class=" form-control" id="form-number" ng-model="vm.retrieveObj.number">
+                </div>
+                <div class="form-group" ng-show="vm.chooseEmail">
+                    <input type="email" name="retrieveEmail" placeholder="Email..." class=" form-control" id="form-email" ng-model="vm.retrieveObj.email">
+                </div>
+                <button type="submit" class="button btn btn-info col-lg-12" ng-click="vm.continued()">Continue</button>
+            </form>
+        </div>
+        <div class="panel-footer animate-show" style="background-color: white;padding-top: 20px;" ng-show="vm.isContinued">
+            <div><span>The new password has been sent to your email box. If you haven't received it in 1 minute, please click resend.</span></div>
+            <br><div><button class="btn btn-info btn-xm">Resend</button></div>
+        </div>
+    </div>
+</div>

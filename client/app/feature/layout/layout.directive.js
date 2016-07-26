@@ -20,9 +20,11 @@
         vm.signIn = signIn;
         vm.isCertified = isCertified;
         vm.logout = logout;
+        vm.saveSearchArea = saveSearchArea
         function init(){
             vm.registerObj = {};
             vm.isUser = false;
+            vm.openSearchSection = false;
             vm.isCertified();
         }
         function isCertified(){
@@ -46,7 +48,7 @@
         function logout(){
             delete $localStorage.user;
             vm.userName = 'sign in'
-            $state.go('shareeconomy.signIn');
+            $state.go('signIn');
         }
         function openModal(modalId){
            snapLightboxService.open($rootScope,modalId);
@@ -66,6 +68,9 @@
                     snapLightboxService.close($rootScope,'#signIn');
                 }
             })
+        }
+        function saveSearchArea() {
+            vm.openSearchSection = false;
         }
     }
 })()
