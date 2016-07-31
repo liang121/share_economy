@@ -1,7 +1,7 @@
 (function(){
     angular.module('router',[])
         .config(function($locationProvider, $stateProvider, $urlRouterProvider){
-            $urlRouterProvider.otherwise('shareeconomy/home');
+            // $urlRouterProvider.otherwise('shareeconomy/home');
             $locationProvider.html5Mode(true);
             $stateProvider
                 .state('signIn',{
@@ -45,7 +45,7 @@
                 .state('shareeconomy.messageCenter.inbox',{
                     url: '/inbox',
                     template:'<message-inbox></message-inbox>',
-                    params: { messageBoxType: null, }
+                    params: { messageBoxType: 'System Messages', }
                     // resolve:{
                     //     // messageBoxType: ['$stateParams',function($stateParams){
                     //     //     return $stateParams.messageBoxType;

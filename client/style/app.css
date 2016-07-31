@@ -222,6 +222,10 @@ label{
     background-color: #555;
     color: white;
 }
+.message-center-sidebar-active{
+    background-color: #555;
+    color: white !important;
+}
 .message-center .table>tbody>tr>td{
     border:none;
 }
@@ -231,6 +235,9 @@ label{
 }
 .message-center a{
     color:black;
+}
+.message-box .button-active{
+    background-color: #db524b;
 }
 .readed {
     font-weight: bold;

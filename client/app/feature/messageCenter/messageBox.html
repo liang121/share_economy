@@ -1,40 +1,52 @@
-<div ng-init='vm.init()' style="margin-left: 30px"> 
+<div ng-init='vm.init()' style="margin-left: 30px" class="message-box">
 	<div class="panel panel-default">
 		<div class="panel-heading" style="background-color: #f1f1f1">
 			<div class="btn-group" ng-if="vm.templateId==='inBox'">
-		  		<button type="button" class="btn btn-info" ng-click='vm.getMessage("systemMessages")'>System Messages</button>
-		  		<button type="button" class="btn btn-info" ng-click='vm.getMessage("biddingMessages")'>Bidding Messages</button>
-		  		<button type="button" class="btn btn-info" ng-click='vm.getMessage("traderMessages")'>Trader Messages</button>
-		  		<button type="button" class="btn btn-info" ng-click='vm.getMessage("ItemsMessages")'>Items Messages</button>
+		  		<button type="button"
+						class="btn btn-info"
+						ng-click='vm.getMessage("System Messages")'
+						ng-class="{'button-active':vm.messageBoxType === 'System Messages'}">System Messages</button>
+		  		<button type="button"
+						class="btn btn-info"
+						ng-click='vm.getMessage("Bid Messages")'
+						ng-class="{'button-active':vm.messageBoxType === 'Bid Messages'}">Bid Messages</button>
+		  		<!--<button type="button"-->
+						<!--class="btn btn-info"-->
+						<!--ng-click='vm.getMessage("traderMessages")'-->
+						<!--ng-class="{'button-active':vm.messageBoxType === 'traderMessages'}">Trader Messages</button>-->
+		  		<button type="button"
+						class="btn btn-info"
+						ng-click='vm.getMessage("Items Messages")'
+						ng-class="{'button-active':vm.messageBoxType === 'Items Messages'}">Items Messages</button>
 			</div>
 			<div class="btn-group" style="float:right" ng-show='vm.showManulButton'>
 			    <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown">
-			    	Mark As Read <span class="caret"></span>
+			    	{{vm.mark}} <span class="caret"></span>
 			  	</button>
 			  	<ul class="dropdown-menu">
-			    	<li><a href="#">Mark As UnRead</a></li>
-			    	<li><a href="#">Mark As Read </a></li>
-			    	<li><a href="#">Delete</a></li>
+			    	<li><a ng-click="vm.operateMessage('UR','Mark As UnRead')">Mark As UnRead</a></li>
+			    	<li><a ng-click="vm.operateMessage('R','Mark As Read')">Mark As Read </a></li>
+			    	<li><a ng-click="vm.operateMessage('D','Delete')">Delete</a></li>
 			    </ul>
 			</div>
 
 			<div class="btn-group" ng-if="vm.templateId==='sent'">
-		  		<button type="button" class="btn btn-info" ng-click='vm.getMessage("sentaMessages")'>Sent Messages</button>
+		  		<button type="button" class="btn btn-info" ng-click='vm.getMessage("sentMessages")'>Sent Messages</button>
 			</div>
 		</div>
 		<div class="panel-body">
 			<table class="table table-hover" ng-show='vm.boxContents!==0'>
-				<tr ng-repeat='item in vm.boxContents track by $index' style="font-size: 13px" ng-class="{readed:!item.isReaded}">
-					<td ng-click='$event.stopPropagation()'>
+				<tr ng-repeat='item in vm.boxContents | messageFilter:vm.filterCondition:true track by $index' style="font-size: 13px" ng-class="{readed:!item.isReaded}">
+					<td ng-click='$event.stopPropagation();' style="width:10px">
 						<div class="checkbox">
-							<label><input type="checkbox" ng-model='item.selected' ng-click='$event.stopPropagation()'> &nbsp;&nbsp;&nbsp;</label>
+							<label><input type="checkbox" ng-model='item.selected' ng-click='$event.stopPropagation()'> </label>
 						</div>
 					</td>
-					<td>
+					<td ng-click="vm.openModal('#messageContentModal',item)">
 						<a> {{item.title}}</a>
 					</td>
 					<td style="float:left">
-						{{item.date}} {{item.time}}
+						{{item.messageHeader.date}} {{item.messageHeader.time}}
 					</td>
 				</tr>
 			</table>
@@ -42,5 +54,17 @@
 				<span>No Messages</span>
 			</div>
 		</div>
+	</div>
+	<div class="lightbox-container" >
+		<snap-lightbox
+				box-id = "messageContentModal"
+				box-type = "right"
+				right-class='col-lg-3'>
+			<span class="glyphicon glyphicon-remove" style="float:right;cursor: pointer;" ng-click="vm.closeModal('#messageContentModal')"></span>
+			<h4>{{vm.messageBoxType}} Box</h4>
+			<hr>
+			<div class="lightbox-body" ng-include="'app/feature/messageCenter/modal/messageContentModal.html'"></div>
+
+		</snap-lightbox>
 	</div>
 </div>

@@ -1,0 +1,24 @@
+<div>
+    <div class="col-lg-12" style="padding-left: 0px">
+        <div class="col-lg-3" style="padding-left: 0px">
+            <img src="../server/public/profile/icon-user-default.png"  class="img-thumbnail">
+        </div>
+        <div class="col-lg-5" style="font-size: 13px;padding-left: 0px">
+            <span> From {{vm.modalItem.messageHeader.sender}} </span>
+        </div>
+        <div class="col-lg-5" style="font-size: 13px;padding-left: 0px;margin-top:5px">
+            <span > To {{vm.modalItem.messageHeader.receiver}}</span>
+        </div>
+        <div class="col-lg-8" style="font-size: 13px;padding-left: 0px;margin-top:5px">
+            <span>{{vm.modalItem.messageHeader.date|date:'mediumDate'}}, &nbsp;&nbsp;{{vm.modalItem.messageHeader.time}}</span>
+        </div>
+
+    </div>
+    <div class="col-lg-12" style="margin-top:10px; padding-left: 0px">
+        <h5 style="">Title: {{vm.modalItem.title}}</h5>
+    </div>
+    <hr style="clear:both">
+    <span style="font-size: 15px;font-weight: 900">Content:</span>
+    <div>{{vm.modalItem.messageContent}}</div>
+
+</div>

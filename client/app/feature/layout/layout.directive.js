@@ -58,7 +58,6 @@
         }
         function registerAccount(){
             $http.post('registerAccount',vm.registerObj).then(function(req,res){
-                console.log(vm.registerObj);
             })
         }
         function signIn (){
