@@ -1,7 +1,7 @@
 (function(){
 	angular
 		.module('app.itemDetail')
-		.directive('itemDetail',['$http','snapLightboxService','$rootScope',itemDetail]);
+		.directive('itemDetail',['$http','snapLightboxService','$rootScope','$location',itemDetail]);
 	function itemDetail(){
 		return {
 			restrict: 'E',
@@ -10,7 +10,7 @@
 			controllerAs: 'vm',
 			bindToCOntroller: true
 		}
-		function itemDetailCtrl($http,snapLightboxService,$rootScope){
+		function itemDetailCtrl($http,snapLightboxService,$rootScope,$location){
 			var vm = this;
 			vm.init = init;
 			vm.getItemDetail = getItemDetail;
@@ -18,10 +18,16 @@
 			vm.showMoreAnswers = showMoreAnswers;
 			vm.openEditCommentsModal = openEditCommentsModal;
 			vm.closeEditCommentsModal = closeEditCommentsModal;
+			vm.addComment = addComment;
+			vm.submitComment = submitComment;
+			vm.replyComment = replyComment;
+			vm.cancelComment = cancelComment;
 			function init(){
 				//vm.showAnswerNum = 1;
 				vm.questionIndex = 0;
 				vm.answerIndex = 0;
+				vm.showCommentField = false;
+				vm.commentFieldPlaceholder = '';
 				console.log('this is itemDetail page');
 				vm.getItemDetail();
 				vm.getItemQuestions();
@@ -187,12 +193,33 @@
 				
 			}
 			function openEditCommentsModal(questionIndex,answerIndex, modalId){
+				$location.hash('commentModalHeader');
 				vm.questionModalObj = vm.questions.questionContents[questionIndex];
 				vm.answerModalObj = vm.questionModalObj.answers[answerIndex];
 				snapLightboxService.open($rootScope,modalId);
 			}
 			function closeEditCommentsModal(modalId){
+				$location.hash('');
+				vm.showCommentField = false;
 				snapLightboxService.close($rootScope,modalId);
+			}
+			function addComment(){
+				vm.commentFieldPlaceholder = 'add a comment...'
+				$location.hash('commentField');
+				vm.showCommentField = true;
+			}
+			function submitComment(){
+				$location.hash('');
+				vm.showCommentField = false;
+			}
+			function replyComment(commentObj){
+				vm.commentFieldPlaceholder = '@'+commentObj.commentBy;
+				$location.hash('commentField');
+				vm.showCommentField = true;
+			}
+			function cancelComment(){
+				vm.showCommentField=false;
+				$location.hash('');
 			}
 		}
 	}

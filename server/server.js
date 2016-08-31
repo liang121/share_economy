@@ -13,7 +13,7 @@ var register = require('./routes/register');
 var systemMessagesOperate = require('./routes/systemMessagesOperate');
 var bidMessagesOperate = require('./routes/bidMessagesOperate');
 var itemsMessagesOperate = require('./routes/itemsMessagesOperate');
-
+var getItemDetial = require('./routes/getItemDetail');
 
 
 /*set router*/
@@ -33,6 +33,7 @@ app.use('/api/registerAccount', register);
 app.use('/api/inbox/systemMessages/operate',systemMessagesOperate);
 app.use('/api/inbox/bidMessages/operate',bidMessagesOperate);
 app.use('/api/inbox/itemsMessages/operate',itemsMessagesOperate);
+app.use('api/itemDetail', getItemDetial);
 
 
 
