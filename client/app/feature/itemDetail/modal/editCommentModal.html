@@ -1,0 +1,30 @@
+<div class="col-lg-12">
+	<div>
+		<div class="col-lg-2" style="font-weight:bold;font-size:15px">Question: </div>
+		<div class="col-lg-10" style="padding-left:15px">{{vm.questionModalObj.questionTitle}}</div>
+	</div>
+	<br><br>
+	<hr style="clear:both">
+	<div>
+		<div class="col-lg-2" style="font-weight:bold;font-size:15px;clear:both">Answer: </div>
+		<div class="col-lg-10" style="float:right;padding-bottom:10px" >
+			<span>{{vm.answerModalObj.answerContent}}</span><br><br>
+			<div style="float:right;font-size:13px">By <a>{{vm.answerModalObj.answerBy}}</a> on May 26, 2015</div>
+		</div>
+	</div>
+	<br><br>
+	<div style="clear:both">
+		<div class="col-lg-1" style="font-weight:bold;font-size:14px">Comment: </div>
+		<div class="col-lg-11" style="float:right;font-size:12px;color:gray;margin-top:30px;">
+			<div style="clear:both" ng-repeat= "comment in vm.answerModalObj.comments">
+				<div style="padding-left:15px;margin-top:20px;">{{comment.commentContent}} <span> <i class="fa fa-pencil" aria-hidden="true" style="padding-left:10px"></i></span></div>
+				<div style="float:right">
+					- <a>{{comment.commentBy}}</a><br>
+					<div style="margin-bottom:10px">{{comment.date}}</div>
+				</div>
+				<hr style="clear:both">
+			</div>
+		</div>
+		
+	</div>
+</div>
