@@ -21,6 +21,7 @@
         'app.lists',
         'app.ownedItems',
         'app.messageCenter',
-        'app.visitorReview'
+        'app.visitorReview',
+        'app.itemDetail'
     ])
 })();

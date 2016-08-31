@@ -71,5 +71,9 @@
                     url: '/visitorReview',
                     template:'<visitor-review></visitor-review>'
                 })
+                .state('shareeconomy.itemDetail',{
+                    url: '/itemDetail',
+                    template:'<item-detail></item-detail>'
+                })
         })
 })()

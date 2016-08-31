@@ -27,8 +27,10 @@ router.post('/',function(req,res){
                 break;
             case 'D':
                 updateDelete(idArray);
+                break;
             case 'G':
                 updateGet();
+                break;
         }
     } 
     function updateGet(){
