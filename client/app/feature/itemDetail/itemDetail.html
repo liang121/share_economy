@@ -10,12 +10,12 @@
         <div class="col-lg-6" style="padding:10px 40px;font-size: 17px">
         	<div>Item Id: {{vm.itemDetail.itemId}}</div>
             <div>{{vm.itemDetail.itemTitle}}</div>
-            <div style="font-size:90%">by <a>{{vm.itemDetail.sellerBy}}</a></div>
+            <div style="font-size:90%">by <a ui-sref="shareeconomy.visitorReview({user:'Moyu Liang'})">{{vm.itemDetail.sellerBy}}</a></div>
             <div style="font-size: 80%;margin-top:10px">
                 <div>
                 	<uib-rating ng-model="vm.itemDetail.rate" max="5" read-only="true" ></uib-rating>
                 	<label style="">Reviewed By:</label><a style="font-size:16px">{{vm.itemDetail.reviewedNum}} Customers</a>
-                	<label style="border-left:1px solid lightgrey;">Answered Questions:</label> <a style="font-size:16px">{{vm.itemDetail.questionsNum}} Customers </a>
+                	<label style="border-left:1px solid lightgrey;">Answered Questions:</label> <a style="font-size:16px" ng-click="vm.goToAnswerQuestion()">{{vm.itemDetail.questionsNum}} </a>
                 	<br>
                 	<label style="">Collected By:</label> <a style="font-size:16px">{{vm.itemDetail.collectedNum}} customers </a>
 
@@ -25,12 +25,6 @@
                     <br>
                     <label style="">Brand New Item in Market:</label> <span style="font-size:16px;color:#f2ae44">${{vm.itemDetail.newItemPrice}}  </span><a style="padding-left:10px" href="https://www.amazon.com/dp/B01BGC39JY/ref=s9_acss_bw_hsb_TVBBWK35_s3_n?pf_rd_m=ATVPDKIKX0DER&pf_rd_s=merchandised-search-3&pf_rd_r=YTR1AECWZFHENKVZHY8G&pf_rd_t=101&pf_rd_p=2596992402&pf_rd_i=1266092011" target="_blank"> Check same item in amazon</a>
                     <br>
-                    <!-- <i
-                        class="glyphicon"
-                        style="cursor:pointer"
-                        ng-click="vm.openDetail()"
-                        ng-class="{'glyphicon-chevron-down': vm.status.item1DetailOpen, 'glyphicon-chevron-right': !vm.status.item1DetailOpen}">
-                    </i> -->
                     <label>Items Description:</label>
                     <br>
                     <panel class="col-lg-12" style='font-size: 13px'>
@@ -42,9 +36,6 @@
                     </panel>
                 </div>
             </div>
-            <!--<br>-->
-            <!--<pre>Added: 07/05/2016</pre>-->
-            <!--<pre>Modified: 07/12/2016</pre>-->
         </div>
 	    <div class="col-lg-3" style="margin-top:50px">
             
@@ -53,7 +44,7 @@
             <button class="btn btn-ml btn-info col-lg-12" style="text-align:left"><i class="fa fa-shopping-basket" aria-hidden="true" style="margin-right:10px"></i> Add the Item To Wish List</button>
         </div>     
     </div>
-    <div class="col-lg-12" style="padding-bottom:100px">
+    <div class="col-lg-12" style="padding-bottom:100px" id="answerQuestion">
     	<hr> 
     	<h4>Customer Questions & Answers</h4>
     	<br>
@@ -81,6 +72,7 @@
 		    		</div>
 		    		<div style="float:left;padding-left:19%">
 		    		<button class="btn btn-info btn-xs" style="padding:0 5px;margin-right:10px" ng-click="vm.showMoreAnswers($index)" ng-disabled='vm.showAnswerNum[$index]>=question.answersNum-1'>See More Answers <span class="badge">{{question.answersNum-vm.showAnswerNum[$index]-1}}</span></button>
+                    <button class="btn btn-info btn-xs" style="padding:0 5px;margin-right:10px" ng-click="vm.addAnswer($index,'#answerModal')">Add a Answer</button>
 		    		<button class="btn btn-default btn-xs" ng-click='vm.showAnswerNum[$index]=0'>Collapse All</button>
 	    			</div>
 	    		</div>
@@ -95,7 +87,13 @@
                 right-class='col-lg-6'>
             <span class="glyphicon glyphicon-remove" style="float:right;cursor: pointer;" ng-click="vm.closeEditCommentsModal('#commentModal')"></span>
             <div class="lightbox-body" ng-include="'app/feature/itemDetail/modal/editCommentModal.html'"></div>
-
+        </snap-lightbox>
+        <snap-lightbox
+                box-id = "answerModal"
+                box-type = "right"
+                right-class='col-lg-4'>
+            <span class="glyphicon glyphicon-remove" style="float:right;cursor: pointer;" ng-click="vm.closeAnswerModal('#answerModal')"></span>
+            <div class="lightbox-body" ng-include="'app/feature/itemDetail/modal/addAnswerModal.html'"></div>
         </snap-lightbox>
     </div>
 </div>

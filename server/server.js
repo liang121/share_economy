@@ -14,7 +14,9 @@ var systemMessagesOperate = require('./routes/systemMessagesOperate');
 var bidMessagesOperate = require('./routes/bidMessagesOperate');
 var itemsMessagesOperate = require('./routes/itemsMessagesOperate');
 var getItemDetial = require('./routes/getItemDetail');
-
+var getQuestions = require('./routes/getQuestions');
+var addComment = require('./routes/addComment');
+var addAnswer = require('./routes/addAnswer');
 
 /*set router*/
 
@@ -33,7 +35,10 @@ app.use('/api/registerAccount', register);
 app.use('/api/inbox/systemMessages/operate',systemMessagesOperate);
 app.use('/api/inbox/bidMessages/operate',bidMessagesOperate);
 app.use('/api/inbox/itemsMessages/operate',itemsMessagesOperate);
-app.use('api/itemDetail', getItemDetial);
+app.use('/api/itemDetail', getItemDetial);
+app.use('/api/question', getQuestions);
+app.use('/api/comment', addComment);
+app.use('/api/answer', addAnswer);
 
 
 

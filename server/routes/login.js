@@ -2,12 +2,12 @@ var express = require("express");
 var router  = express.Router();
 var mongojs = require('mongojs');
 // var db = mongojs('mongodb://liang121:123@ds017195.mlab.com:17195/mongo_express',['userInfo']);
-var db_xchange = mongojs('xchange',['userInfo']);
+var db_xchange = mongojs('xchange',['user_info']);
 var bodyParser = require('body-parser');
 
 router.post('/',function(req,res){
     var obj = req.body;
-    db_xchange.userInfo.findOne({userName:obj.userName},function(err,doc){
+    db_xchange.user_info.findOne({userName:obj.userName},function(err,doc){
         if(err){
             res.json(err);
         }else{

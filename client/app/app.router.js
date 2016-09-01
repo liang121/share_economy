@@ -68,12 +68,22 @@
                     template:'<wait-list></wait-list>'
                 })
                 .state('shareeconomy.visitorReview',{
-                    url: '/visitorReview',
-                    template:'<visitor-review></visitor-review>'
+                    url: '/visitorReview/:user',
+                    template:'<visitor-review></visitor-review>',
+                    resolve:{
+                        user: function($stateParams){
+                            return $stateParams.user
+                        }
+                    }
                 })
                 .state('shareeconomy.itemDetail',{
-                    url: '/itemDetail',
-                    template:'<item-detail></item-detail>'
+                    url: '/itemDetail/:itemId',
+                    template:'<item-detail></item-detail>',
+                    resolve:{
+                        itemId: function($stateParams){
+                            return $stateParams.itemId;
+                        }
+                    }
                 })
         })
 })()
