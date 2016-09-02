@@ -2,8 +2,8 @@ var express = require("express");
 var router  = express.Router();
 var mongojs = require('mongojs');
 
-// var db = mongojs('mongodb:liang121:123@ds017195.mlab.com:17195/mongo_express',['userInfo']); 
-var db_xchange = mongojs('xchange',['item_detail']);
+var db_xchange = mongojs('mongodb://liang121:123@ds019766.mlab.com:19766/xchange',['item_detail']); 
+//var db_xchange = mongojs('xchange',['item_detail']);
 var bodyParser = require('body-parser');
 router.get('/:itemId',function(req,res){
     var itemId = req.params.itemId; 
