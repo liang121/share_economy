@@ -4,6 +4,9 @@ body html{
     padding:0 0;
     overflow: hidden;
 }
+/*div {
+    background-color:green;
+}*/
 .search-area{
     box-shadow: 0 1px 3px #C6C7C7;
     background-color: #EEEFEF;

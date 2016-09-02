@@ -356,36 +356,36 @@
 								angular.copy(res.data,vm.boxContents)
 							}
 						})
-					vm.boxContents = [
-										{
-											title: 'Yinyu Niu commented on your item# 1021433',
-											messageHeader:{
-												date: '2016/11/27',
-												time: '09:13:30',
-												itemNum: '1021433',
-												bidNum: '103756',
-												sender: 'Yinyu Niu',
-												receiver: 'Moyu Liang'
-											},
-											messageContent: 'Yinyu Niu commented on your item# 1021433: USB cable, click below link to check the detail.',
-											selected: false,
-											isReaded: true
-										},
-										{
-											title: 'Yinyu Niu rated your item# 1021434: SD card',
-											messageHeader:{
-												date: '2016/11/27',
-												time: '09:13:30',
-												itemNum: '1021433',
-												bidNum: null,
-												sender: 'Yinyu Niu',
-												receiver: 'Moyu Liang'
-											},
-											messageContent: 'Yinyu Niu looking into and rated on your item# 1021433: USB cable',
-											selected: false,
-											isReaded: true
-										}
-									];
+					// vm.boxContents = [
+					// 					{
+					// 						title: 'Yinyu Niu commented on your item# 1021433',
+					// 						messageHeader:{
+					// 							date: '2016/11/27',
+					// 							time: '09:13:30',
+					// 							itemNum: '1021433',
+					// 							bidNum: '103756',
+					// 							sender: 'Yinyu Niu',
+					// 							receiver: 'Moyu Liang'
+					// 						},
+					// 						messageContent: 'Yinyu Niu commented on your item# 1021433: USB cable, click below link to check the detail.',
+					// 						selected: false,
+					// 						isReaded: true
+					// 					},
+					// 					{
+					// 						title: 'Yinyu Niu rated your item# 1021434: SD card',
+					// 						messageHeader:{
+					// 							date: '2016/11/27',
+					// 							time: '09:13:30',
+					// 							itemNum: '1021433',
+					// 							bidNum: null,
+					// 							sender: 'Yinyu Niu',
+					// 							receiver: 'Moyu Liang'
+					// 						},
+					// 						messageContent: 'Yinyu Niu looking into and rated on your item# 1021433: USB cable',
+					// 						selected: false,
+					// 						isReaded: true
+					// 					}
+					// 				];
 					break;
 
 			}
