@@ -1,7 +1,9 @@
-var express = require("express");
+var express = require('express');
 var router  = express.Router();
 var mongojs = require('mongojs');
-var db_xchange = mongojs('mongodb://liang121:123@ds019766.mlab.com:19766/xchange',['user_info']);
+var connectToDatabase = require ('../connectToDb/connectToDatabase');
+var db_xchange = connectToDatabase.connection;
+//var db_xchange = mongojs('mongodb://liang121:123@ds019766.mlab.com:19766/xchange',['user_info']);
 //var db_xchange = mongojs('xchange',['user_info']);
 var bodyParser = require('body-parser');
 
