@@ -52,7 +52,7 @@
             <div class="panel-body">
                 <div class="group1">
                     <uib-accordion>
-                        <uib-accordion-group is-open="vm.isOpen.login">
+                        <div uib-accordion-group is-open="vm.isOpen.login">
                             <uib-accordion-heading>
                                 <span style="font-size: 13px">Login</span> <i style="font-size: 13px" class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
                             </uib-accordion-heading>
@@ -74,12 +74,12 @@
                                     <button class="btn btn-xs btn-danger"><span>Edit</span></button>
                                 </div>
                             </div>
-                        </uib-accordion-group>
+                        </div>
                     </uib-accordion>
                 </div>
                 <div class="group2">
                     <uib-accordion>
-                        <uib-accordion-group is-open="vm.isOpen.manageShipTo">
+                        <div uib-accordion-group is-open="vm.isOpen.manageShipTo">
                             <uib-accordion-heading>
                                 <span style="font-size: 13px">Manage Ship Address</span> <i style="font-size: 13px" class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
                             </uib-accordion-heading>
@@ -105,12 +105,12 @@
                                     <button class="btn btn-xs btn-danger"><span>Edit</span></button>
                                 </div>
                             </div>
-                        </uib-accordion-group>
+                        </div>
                     </uib-accordion>
                 </div>
                 <div class="group3">
                     <uib-accordion>
-                        <uib-accordion-group is-open="vm.isOpen.managePaymentInfo">
+                        <div uib-accordion-group is-open="vm.isOpen.managePaymentInfo">
                             <uib-accordion-heading>
                                 <span style="font-size: 13px">Manage Pament Info</span> <i style="font-size: 13px" class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
                             </uib-accordion-heading>
@@ -124,7 +124,7 @@
                                     <button class="btn btn-xs btn-danger"><span>Edit</span></button>
                                 </div><br>
                             </form>
-                        </uib-accordion-group>
+                        </div>
                     </uib-accordion>
                 </div>
             </div>
@@ -139,7 +139,7 @@
             <div class="panel-body">
                 <div class="group1">
                     <uib-accordion>
-                        <uib-accordion-group is-open="vm.isOpen.purchaseHistory">
+                        <div uib-accordion-group is-open="vm.isOpen.purchaseHistory">
                             <uib-accordion-heading>
                                 <span style="font-size: 13px">Trade History</span> <i style="font-size: 13px" class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
                             </uib-accordion-heading>
@@ -157,12 +157,12 @@
                                     <button class="btn btn-xs btn-danger"><span>Detail</span></button>
                                 </div><br>
                             </div>
-                        </uib-accordion-group>
+                        </div>
                     </uib-accordion>
                 </div>
                 <div class="group2">
                     <uib-accordion>
-                        <uib-accordion-group is-open="vm.isOpen.ownedItems">
+                        <div uib-accordion-group is-open="vm.isOpen.ownedItems">
                             <uib-accordion-heading>
                                 <span style="font-size: 13px">Manage Your Dashboard</span> <i style="font-size: 13px" class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
                             </uib-accordion-heading>
@@ -170,12 +170,12 @@
                             <button class="btn btn-group-sm btn-danger" ng-show="true" ui-sref='shareeconomy.ownedItems'>
                                 Go To Your Dashboard
                             </button>
-                        </uib-accordion-group>
+                        </div>
                     </uib-accordion>
                 </div>
                 <div class="group3">
                     <uib-accordion>
-                        <uib-accordion-group is-open="vm.isOpen.feedback">
+                        <div uib-accordion-group is-open="vm.isOpen.feedback">
                             <uib-accordion-heading>
                                 <span style="font-size: 13px">Trading Feedback To Your</span> <i style="font-size: 13px" class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
                             </uib-accordion-heading>
@@ -211,12 +211,12 @@
                                     </div>
                                 </div><br>
                             </div>
-                        </uib-accordion-group>
+                        </div>
                     </uib-accordion>
                 </div>
                 <div class="group4">
                     <uib-accordion>
-                        <uib-accordion-group is-open="vm.isOpen.lists">
+                        <div uib-accordion-group is-open="vm.isOpen.lists">
                             <uib-accordion-heading>
                                 <span style="font-size: 13px">Manage Your List</span> <i style="font-size: 13px" class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
                             </uib-accordion-heading>
@@ -238,7 +238,7 @@
                                     <button class="btn btn-xs btn-danger"><span>Edit</span></button>
                                 </div>
                             </div>
-                        </uib-accordion-group>
+                        </div>
                     </uib-accordion>
                 </div>
             </div>

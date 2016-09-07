@@ -4,6 +4,9 @@ body html{
     padding:0 0;
     overflow: hidden;
 }
+.table td {
+   text-align: center;   
+}
 /*div {
     background-color:green;
 }*/
@@ -249,6 +252,23 @@ label{
 .visitorReview .table>tbody>tr>td {
     font-size: 14px
 }
+
+
+/*popover style*/
+.popover.right{
+    /*background:rgba(0,0,0,0.3)；*/
+    /*z-index:900;
+    opacity:0.3;*/
+    /*opacity:0.3;
+*/
+    background:rgba(255,255,255, 0.9);
+    width:310px;
+}
+.popover{
+    max-width: 600px
+}
+
+
 /*.shopping-cart .list-group > li:hover{*/
     /*background-color: white;*/
 /*}*/
@@ -315,10 +335,10 @@ label{
 .top-lightbox.launch-lightbox {
     margin-bottom: 80px;
     margin-top: 80px; }
-@media only screen and (min-width: 900px) and (max-width: 1300px) {
+/*@media only screen and (min-width: 900px) and (max-width: 1300px) {
     .top-lightbox {
         margin-left: -30%;
-        width: 60%; } }
+        width: 60%; } }*/
 @media only screen and (min-width: 600px) and (max-width: 900px) {
     .top-lightbox {
         margin-left: -36%;
@@ -419,7 +439,7 @@ label{
     margin-bottom: 20px; }
 
 /*ng-show animation*/
-.animate-show {
+/*.animate-show {
     line-height: 20px;
     padding: 10px;
 }
@@ -438,5 +458,26 @@ label{
     padding: 10px;
     border: 1px solid black;
     background: white;
+}*/
+
+.animate-show {
+  line-height: 20px;
+  opacity: 1;
+  padding: 10px;
 }
 
+.animate-show.ng-hide-add, .animate-show.ng-hide-remove {
+  transition: all linear 0.5s;
+}
+
+.animate-show.ng-hide {
+  line-height: 0;
+  opacity: 0;
+  padding: 0 10px;
+}
+
+.check-element {
+  padding: 10px;
+  border: 1px solid black;
+  background: white;
+}

@@ -7,8 +7,10 @@
 	                 class="img-thumbnail">
 	        </div>
 	        <div style="display: inline-block;margin-left: 30px"><span>MOYU LIANG's ACCOUNT</span></div>
-	        <div style="display: inline-block;margin-left: 30px"><button class="btn btn-info btn-sm">Contact Info</button></div>
-	        <div style="display: inline-block;margin-left: 10px"><button class="btn btn-info btn-sm">Leave Message</button></div>
+	        <div style="display: inline-block;margin-left: 30px">
+	        	<button class="btn btn-info btn-sm" ng-click="vm.openContactModal('#contactInfoModal')">Contact Info</button>
+	        	<a class="btn btn-info btn-sm" ng-click="vm.openContactModal('#contactInfoModal')">2 customer reviews</a>
+	        </div>
 		</div>
 		<div class="panel-body">
 			<div class="col-lg-4">
@@ -17,7 +19,7 @@
 				</canvas> 
 			</div>
 			<div class="col-lg-5" style="float:right;padding-top: 0px">
-				<h3 style="margin-top: 0px">Bidding Deals</h3>
+				<h5 style="margin-top: 0px">Bidding Deals</h5>
 				<hr style="margin-top: -2px" />
 
 				<div style="height:30px;width: 30px;border-radius: 50%;background-color: #fa4444;float:left;"></div>
@@ -35,15 +37,15 @@
 				<div style="padding-left: 20px;float:right;padding-bottom: 5px;padding-right: 20px"><span style="font-size: 20px">5</span></div>
 				<hr style="margin-top: -2px;clear:both" />
 			</div>
-			<div class="col-lg-12" style="padding-top: 30px">
-				<table class="table table-info">
+			
+			<div class="col-lg-12" style="padding-top: 30px;border-top:1px solid #bce8f1;margin-top:20px;clear:both">
+				<table class="table table-info" >
 					<thead>
 						<tr>
 							<td>MOYU LIANG's Wishes</td>
 							<td>Potential Traders #</td>
 							<td>Create Date</td>
 							<td>Exp Date</td>
-							<td>His Trading Items</td>
 							<td>&nbsp;</td>
 						</tr>
 					</thead>
@@ -53,10 +55,9 @@
 							<td><a>3</a></td>
 							<td>05/27/2016</td>
 							<td>07/27/2016</td>
-							<td><a>Brand New HP 29 inches Monitor</a></td>
 							<td>
-								<button class="btn btn-info btn-xs">Interested</button>
-								<button class="btn btn-info btn-xs">Bid On This</button>
+								<button class="btn btn-info btn-xs">Move to wishlist</button>
+								<button class="btn btn-info btn-xs">Move to shopping cart</button>
 							</td>
 						</tr>
 						<tr>
@@ -64,10 +65,9 @@
 							<td><a>3</a></td>
 							<td>05/27/2016</td>
 							<td>06/20/2016</td>
-							<td><a>House Design CAD</a></td>
 							<td>
-								<button class="btn btn-info btn-xs">Interested</button>
-								<button class="btn btn-info btn-xs">Bid On This</button>
+								<button class="btn btn-info btn-xs">Move to wishlist</button>
+								<button class="btn btn-info btn-xs">Move to shopping cart</button>
 							</td>
 						</tr>
 						<tr>
@@ -75,10 +75,9 @@
 							<td><a>1024</a></td>
 							<td>05/27/2016</td>
 							<td>12/27/2016</td>
-							<td><a>Google Software Engeneers Positions' Ref</a></td>
 							<td>
-								<button class="btn btn-info btn-xs">Interested</button>
-								<button class="btn btn-info btn-xs">Bid On This</button>
+								<button class="btn btn-info btn-xs">Move to wishlist</button>
+								<button class="btn btn-info btn-xs">Move to shopping cart</button>
 							</td>
 						</tr>	
 					</tbody>
@@ -105,8 +104,8 @@
 							<td>07/27/2016</td>
 							<td>$307</td>
 							<td>
-								<button class="btn btn-info btn-xs">Interested</button>
-								<button class="btn btn-info btn-xs">Bid On This</button>
+								<button class="btn btn-info btn-xs">Move to wishlist</button>
+								<button class="btn btn-info btn-xs">Move to shopping cart</button>
 							</td>
 						</tr>
 						<tr>
@@ -116,8 +115,8 @@
 							<td>06/20/2016</td>
 							<td>$45 / hour</td>
 							<td>
-								<button class="btn btn-info btn-xs">Interested</button>
-								<button class="btn btn-info btn-xs">Bid On This</button>
+								<button class="btn btn-info btn-xs">Move to wishlist</button>
+								<button class="btn btn-info btn-xs">Move to shopping cart</button>
 							</td>
 						</tr>
 						<tr>
@@ -127,8 +126,8 @@
 							<td>12/27/2016</td>
 							<td>Unvalue</td>
 							<td>
-								<button class="btn btn-info btn-xs">Interested</button>
-								<button class="btn btn-info btn-xs">Bid On This</button>
+								<button class="btn btn-info btn-xs">Move to wishlist</button>
+								<button class="btn btn-info btn-xs">Move to shopping cart</button>
 							</td>
 						</tr>	
 						<tr>
@@ -138,13 +137,129 @@
 							<td>12/27/2016</td>
 							<td>$14</td>
 							<td>
-								<button class="btn btn-info btn-xs">Interested</button>
-								<button class="btn btn-info btn-xs">Bid On This</button>
+								<button class="btn btn-info btn-xs">Move to wishlist</button>
+								<button class="btn btn-info btn-xs">Move to shopping cart</button>
 							</td>
 						</tr>
 					</tbody>
 				</table>
 			</div>
+			<div class="col-lg-12" style="padding-bottom:100px;border-top:1px solid #bce8f1;padding-top:30px" id="answerQuestion">
+		    	<h4 style="display:inline-block">Customer Reviews</h4> 
+		    	<span uib-rating 
+                    ng-model="vm.reviewContent.overallRate" 
+                    max="5" 
+                    read-only="true" 
+                    popover-placement="right" 
+                    uib-popover="Overall rate: 3 out of 5 starts"
+                    popover-trigger="'mouseenter'"
+                    style="padding:5px 10px;color:#f2ae44;font-size:15px;display:inline-block;border:1px solid lightgray;border-radius:5px">
+                </span>
+                <br>
+	            <div class="col-lg-5" style="text-align:right;padding-top:20px;padding-bottom:20px">
+	            	<div>
+						<div uib-rating 
+					        ng-model="vm.reviewContent.rateDesc" 
+					        max="5" 
+					        read-only="true" 
+					        popover-placement="right" 
+					        uib-popover-template="'app/feature/itemDetail/popOver/ratePopOver.html'"
+					        popover-trigger="'click'"
+					        style="color:#f2ae44;font-size:14px;float:left">
+					    </div>
+					    <div style="float:left;padding-left:5px;font-size: 13px"><span style="font-weight:bold">130 rates</span> <span style="padding-left:15px;">Item as described</span></div>
+					</div>
+					<br style="clear:both">
+					<div>
+						<div uib-rating 
+					        ng-model="vm.reviewContent.rateComm" 
+					        max="5" 
+					        read-only="true" 
+					        popover-placement="right" 
+					        uib-popover-template="'app/feature/itemDetail/popOver/ratePopOver.html'"
+					        popover-trigger="'click'"
+					        style="color:#f2ae44;font-size:14px;float:left">
+					    </div>
+					    <div style="float:left;padding-left:5px;font-size: 13px"><span style="font-weight:bold">128 rates</span> <span style="padding-left:15px;">Communication</span></div>
+					</div>
+					<br style="clear:both">
+					<div>
+						<div uib-rating 
+					        ng-model="vm.reviewContent.rateShippingTime" 
+					        max="5" 
+					        read-only="true" 
+					        popover-placement="right" 
+					        uib-popover-template="'app/feature/itemDetail/popOver/ratePopOver.html'"
+					        popover-trigger="'click'"
+					        style="color:#f2ae44;font-size:14px;float:left">
+					    </div>
+					    <div style="float:left;padding-left:5px;font-size: 13px"><span style="font-weight:bold">110 rates</span> <span style="padding-left:15px;">Shipping time</span></div>
+					</div>
+					<br style="clear:both">
+					<div>
+						<div uib-rating 
+					        ng-model="vm.reviewContent.rateShippingCharge" 
+					        max="5" 
+					        read-only="true" 
+					        popover-placement="right" 
+					        uib-popover-template="'app/feature/itemDetail/popOver/ratePopOver.html'"
+					        popover-trigger="'click'"
+					        style="color:#f2ae44;font-size:14px;float:left">
+					    </div>
+					    <div style="float:left;padding-left:5px;font-size: 13px"><span style="font-weight:bold">141 rates</span> <span style="padding-left:15px;">Shipping charges</span></div>
+					</div>
+	            </div>
+
+	            <hr style="clear:both">
+		    	<div class="col-lg-10" style="padding-bottom:20px;margin-bottom:10px" ng-repeat="review in vm.reviewContent.reviews track by $index">
+					<div class="col-lg-3" style="">
+			    		<div uib-rating 
+		                    ng-model="review.rate" 
+		                    max="5" 
+		                    read-only="true" 
+		                    popover-placement="right" 
+		                    uib-popover="Overall rate: 3 out of 5 starts"
+		                    popover-trigger="'mouseenter'"
+		                    style="padding:5px 0px;color:#f2ae44;font-size:14px;">
+		                </div>
+		                <div style="display:inline-block;color:gray"><b>rate by:</b><a> {{review.reviewedBy}}</a> on {{review.date}}</div>
+			    	</div>
+			    	<div class="col-lg-9" style="text-align:left;">
+			    		<div>
+				    		<div>
+				    			<div class="col-lg-2" style="font-weight:bold;font-size:15px;text-align:right">Title: </div>
+				    			<div class="col-lg-10" style=""><span>{{review.title}}</span></div>
+				    		</div>
+			    			<br><br>
+			    			<div>
+				    			<div class="col-lg-2" style="font-weight:bold;font-size:15px;text-align:right">Review: </div>
+				    			<div class="col-lg-10">
+				    				<span>{{review.content}}
+									</span>
+				    			</div>
+				    		</div>
+				    		<div style="float:left;padding-left:19%;padding-top:20px">
+			                    <button class="btn btn-info btn-xs" style="padding:0 5px;margin-right:10px" ng-click="vm.addAnswer($index,'#answerModal')">Add a Comment</button>
+			    			</div>
+			    		</div>
+			    	</div>
+			    	<br style="clear:both">
+			    	<hr style="clear:both">
+		    	</div>
+		    	<div class="col-lg-7" style="float:right;">
+		    		<button class="btn btn-info btn-xs" style="padding:0 5px;margin-right:10px" ng-click="vm.showMoreAnswers($index)" ng-disabled='vm.showAnswerNum[$index]>=question.answersNum-1'>See More Answers <span class="badge">{{question.answersNum-vm.showAnswerNum[$index]-1}}</span></button>
+		    		<button class="btn btn-default btn-xs" ng-click='vm.showAnswerNum[$index]=0'>Collapse All</button>
+    			</div>
+		    </div>
 		</div>
+	</div>
+	<div class="lightbox-container">
+		<snap-lightbox
+            box-id = "contactInfoModal"
+            box-type = "top"
+            is-modal="true">
+            <span class="glyphicon glyphicon-remove" style="float:right;cursor: pointer;" ng-click="vm.closeContactModal('#contactInfoModal')"></span>
+            <div class="lightbox-body" ng-include="'app/feature/accountReviewByVisitors/modal/contactModal.html'"></div>
+        </snap-lightbox>
 	</div>
 </div>

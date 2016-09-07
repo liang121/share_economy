@@ -26,6 +26,8 @@
 			vm.closeAnswerModal = closeAnswerModal;
 			vm.submitAnswer = submitAnswer;
 			vm.goToAnswerQuestion = goToAnswerQuestion;
+			vm.closeBargainWithModal = closeBargainWithModal;
+			vm.bargainWithView = bargainWithView;
 			function init(){
 				//vm.showAnswerNum = 1;
 				vm.questionIndex = 0;
@@ -209,6 +211,9 @@
 				vm.showCommentField = false;
 				snapLightboxService.close($rootScope,modalId);
 			}
+			function closeBargainWithModal(modalId){
+				snapLightboxService.close($rootScope,modalId);
+			}
 			function addComment(){
 				vm.commentFieldPlaceholder = 'add a comment...'
 				$location.hash('commentField');
@@ -281,6 +286,9 @@
 				$location.hash('answerQuestion');
 				$anchorScroll();
 
+			}
+			function bargainWithView(modalId){
+				snapLightboxService.open($rootScope,modalId);
 			}
 		}
 	}

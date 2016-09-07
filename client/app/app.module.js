@@ -3,6 +3,7 @@
 
     angular.module('app',[
         'ngAnimate',
+        'ngSanitize',
         'ngStorage',
         'ui.bootstrap',
         'ui.router',
