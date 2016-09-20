@@ -1,0 +1,154 @@
+<div ng-init="vm.init()">
+	<div class="col-lg-2" style="height: 80%;overflow-y: scroll;background-color:#f8f8f8;margin-top:-21px;margin-left:1px;padding-top:20px;padding-bottom:20px">
+
+		<b style="padding-left:10px">Brand</b><br><br>
+		<ul style="list-style: none;padding-left:20px">
+			<li ng-repeat="brand in vm.brands">
+				<input type="checkbox" name="vehicle" value="Bike" style="margin-right:5px" ng-model="brand.isSelected" ng-click="vm.clickBrand()"> <span style="font-size:12px"> {{brand.value}}</span>
+			</li>
+		</ul>
+		<hr>
+
+
+		<b style="padding-left:10px">Display Technology</b><br><br>
+		<ul style="list-style: none;padding-left:20px">
+			<li ng-repeat="techName in vm.displayTech">
+				<input type="checkbox" name="vehicle" value="Bike" style="margin-right:5px"> <span style="font-size:12px"> {{techName.value}}</span>
+			</li>
+		</ul>
+		<hr>
+
+	
+		<b style="padding-left:10px">Max. Resolution</b><br><br>
+		<ul style="list-style: none;padding-left:20px">
+			<li ng-repeat="size in vm.screenSize">
+				<input type="checkbox" name="vehicle" value="Bike" style="margin-right:5px"> <span style="font-size:12px"> {{size.value}}</span>
+			</li>
+		</ul>
+		<hr>
+
+	
+		<b style="padding-left:10px">Screen Size</b><br><br>
+		<ul style="list-style: none;padding-left:20px">
+			<li ng-repeat="resolution in vm.maxResolution">
+				<input type="checkbox" name="vehicle" value="Bike" style="margin-right:5px"> <span style="font-size:12px"> {{resolution.value}}</span>
+			</li>
+		</ul>
+		<hr>
+
+	
+		<b style="padding-left:10px">Condition</b><br><br>
+		<ul style="list-style: none;padding-left:20px">
+			<li ng-repeat="condition in vm.conditions">
+				<input type="checkbox" name="vehicle" value="Bike" style="margin-right:5px"> <span style="font-size:12px"> {{condition.value}}</span>
+			</li>
+		</ul>
+		<hr>
+	</div>
+
+
+
+
+	<div class="" style="height: 80%;overflow-y: scroll;margin-left:15px;padding-top:20px;padding-bottom:20px">
+		<div class="col-lg-10">
+			<div class="col-lg-9" style="padding-top:10px">
+				<span style="padding-right:10px">TCL <a style="color:red"><i class="fa fa-times" aria-hidden="true" style="position:relative;bottom:3px;padding-left:2px"></i></a></span>
+				<span style="padding-right:10px">LED <a style="color:red"><i class="fa fa-times" aria-hidden="true" style="position:relative;bottom:3px;padding-left:2px"></i></a></span>
+				<span style="padding-right:10px">4320p <a style="color:red"><i class="fa fa-times" aria-hidden="true" style="position:relative;bottom:3px;padding-left:2px"></i></a></span>
+				<span style="padding-right:10px">40" - 49" <a style="color:red"><i class="fa fa-times" aria-hidden="true" style="position:relative;bottom:3px;padding-left:2px"></i></a></span>
+			</div>
+			<div class="form-group col-lg-3" style="padding: 5px 5px;float:right">
+	            <select class="form-control">
+	                <option>-choose sort condition-</option>
+	                <option>Distance: nearest</option>
+	                <option>Price: low to high</option>
+	                <option>Price: high to low</option>
+	                <option>Newest</option>
+	                <option>End sooner</option>
+	            </select>
+	        </div>
+		</div>
+		<br>
+		<hr style="clear:both">
+
+		<div>
+			<div class="col-lg-2" style="clear:both">
+	            <img src="../server/public/picture/item_tv.jpg" style="width:100%" class="img-thumbnail">
+	        </div>
+	        <div class="col-lg-8" style="padding:10px 40px;font-size: 17px;">
+	        	<a ui-sref="shareeconomy.itemDetail({itemId:'1002431'})"><div>Item Id: 1002431{{vm.itemDetail.itemId}}</div>
+	            <div>TCL 65US5800 65-Inch 4K Ultra HD Roku Smart LED TV (2016 Model){{vm.itemDetail.itemTitle}}</div></a>
+	            <div style="font-size:15px;width:200px;display:inline-block">
+	                by <a ui-sref="shareeconomy.visitorReview({user:'Moyu Liang'})">liang121{{vm.itemDetail.sellerBy}}</a>
+	            </div>
+	            <br>
+	            <div style="font-size:15px">
+	            	<span style="float:left">3 bids</span>
+	            </div><br>
+	            <div style="font-size:17px;color:#f2ae44">$899.99{{vm.itemDetail.sellerEstPrice}} </div>
+	            <br>
+	        </div>
+	        <hr class="col-lg-8" style="clear:both;margin-top:5px">
+        </div>
+
+        <div>
+			<div class="col-lg-2" style="clear:both">
+	            <img src="../server/public/picture/81eUh0mN-qL._SL1500_.jpg" style="width:100%" class="img-thumbnail">
+	        </div>
+	        <div class="col-lg-8" style="padding:10px 40px;font-size: 17px;">
+	        	<a ui-sref="shareeconomy.itemDetail({itemId:'1002431'})"><div>Item Id: 1002432{{vm.itemDetail.itemId}}</div>
+	            <div>TCL 40FD2700 40-Inch 1080p LED TV (2015 Model){{vm.itemDetail.itemTitle}}</div></a>
+	            <div style="font-size:15px;width:200px;display:inline-block">
+	                by <a ui-sref="shareeconomy.visitorReview({user:'Moyu Liang'})">liang121{{vm.itemDetail.sellerBy}}</a>
+	            </div>
+	            <br>
+	            <div style="font-size:15px">
+	            	<span style="float:left">5 bids</span>
+	            </div><br>
+	            <div style="font-size:17px;color:#f2ae44">$128{{vm.itemDetail.sellerEstPrice}} </div>
+	            <br>
+	        </div>
+	        <hr class="col-lg-8" style="clear:both;margin-top:5px">
+        </div>
+
+        <div>
+			<div class="col-lg-2" style="clear:both">
+	            <img src="../server/public/picture/81lyzx5O+EL._SL1500_.jpg" style="width:100%" class="img-thumbnail">
+	        </div>
+	        <div class="col-lg-8" style="padding:10px 40px;font-size: 17px;">
+	        	<a ui-sref="shareeconomy.itemDetail({itemId:'1002431'})"><div>Item Id: 1002433{{vm.itemDetail.itemId}}</div>
+	            <div>LG 32LH500B 32-Inch 720p HD LED TV (2016 Model){{vm.itemDetail.itemTitle}}</div></a>
+	            <div style="font-size:15px;width:200px;display:inline-block">
+	                by <a ui-sref="shareeconomy.visitorReview({user:'Moyu Liang'})">liang121{{vm.itemDetail.sellerBy}}</a>
+	            </div>
+	            <br>
+	            <div style="font-size:15px">
+	            	<span style="float:left">11 bids</span>
+	            </div><br>
+	            <div style="font-size:17px;color:#f2ae44">$127.95{{vm.itemDetail.sellerEstPrice}} </div>
+	            <br>
+	        </div>
+	        <hr class="col-lg-8" style="clear:both;margin-top:5px">
+        </div>
+
+		<div>
+			<div class="col-lg-2" style="clear:both">
+	            <img src="../server/public/picture/81hhdEQP-tL._SL1500_.jpg" style="width:100%" class="img-thumbnail">
+	        </div>
+	        <div class="col-lg-8" style="padding:10px 40px;font-size: 17px;">
+	        	<a ui-sref="shareeconomy.itemDetail({itemId:'1002431'})"><div>Item Id: 1002533{{vm.itemDetail.itemId}}</div>
+	            <div>Hisense 32H3B1 32-Inch 720p LED TV (2016 Model){{vm.itemDetail.itemTitle}}</div></a>
+	            <div style="font-size:15px;width:200px;display:inline-block">
+	                by <a ui-sref="shareeconomy.visitorReview({user:'Moyu Liang'})">liang121{{vm.itemDetail.sellerBy}}</a>
+	            </div>
+	            <br>
+	            <div style="font-size:15px">
+	            	<span style="float:left">13 bids</span>
+	            </div><br>
+	            <div style="font-size:17px;color:#f2ae44">$129.88{{vm.itemDetail.sellerEstPrice}} </div>
+	            <br>
+	        </div>
+	        <hr class="col-lg-8" style="clear:both;margin-top:5px">
+        </div>
+	</div>
+</div>
