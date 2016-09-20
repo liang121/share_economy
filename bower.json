@@ -23,6 +23,8 @@
     "font-awesome": "^4.6.3",
     "font-awesome-animation": "^0.0.9",
     "ngstorage": "^0.3.10",
-    "angular-sanitize": "^1.5.8"
+    "angular-sanitize": "^1.5.8",
+    "chart.js": "npm:chart.js#^2.2.2",
+    "angular-chart.js": "npm:angular-chart.js#^1.0.2"
   }
 }

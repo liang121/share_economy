@@ -3,10 +3,12 @@
 var express = require("express");
 var app = express();
 var mongojs = require('mongojs');
-// var db = mongojs('mongodb://liang121:123@ds017195.mlab.com:17195/mongo_express',['userInfo']);
-// var db_userInfo = mongojs('xchange',['userInfo']);
 var bodyParser = require('body-parser');
 var router  = express.Router();
+
+
+
+
 
 var login = require('./routes/login');
 var register = require('./routes/register');
@@ -20,13 +22,15 @@ var addAnswer = require('./routes/addAnswer');
 var review = require('./routes/reviews');
 
 /*set router*/
+app.use(express.static('./src/client/'))
+app.use(express.static('./'));
 
-app.use(express.static('../client/'))
-app.use(express.static('../../'));
-// app.use('/*', express.static('../client/index.html'));
-app.use('/shareeconomy/*', express.static('../client/index.html'));
-app.use('/signIn', express.static('../client/index.html'));
-app.use('/register', express.static('../client/index.html'));
+
+
+
+app.use('/shareeconomy/*', express.static('./src/client/index.html'));
+app.use('/signIn', express.static('./src/client/index.html'));
+app.use('/register', express.static('./src/client/index.html'));
 app.use(bodyParser.json());
 
 

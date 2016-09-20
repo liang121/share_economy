@@ -1,5 +1,12 @@
+var args = require('yargs').argv;
+var browserSync = require('browser-sync');
+var config = require('./gulp.config')();
+var del = require('del');
+var glob = require('glob');
 var gulp = require('gulp');
+var path = require('path');
 var inject = require('gulp-inject');
+
 var $ = require('gulp-load-plugins')({lazy: true});
 
 
@@ -7,6 +14,17 @@ var $ = require('gulp-load-plugins')({lazy: true});
 gulp.task('build', ['wireup-dependencies', 'create-teplatecache'], optimize);
 gulp.task('wireup-dependencies', wireUpDependencies);
 gulp.task('create-templatecache', ['clean-templatecache'], createTemplateCache);
+gulp.task('clean-templatecache', cleanTemplateCache);
+gulp.task('serve-dev', function() { serve(true); });
+
+
+function _bytediffFormatter(data) {
+    var difference = (data.savings > 0) ? ' smaller.' : ' larger.';
+    return data.fileName + ' went from ' +
+        (data.startSize / 1000).toFixed(2) + ' kB to ' +
+        (data.endSize / 1000).toFixed(2) + ' kB and is ' +
+        _formatPercent(1 - data.percent, 2) + '%' + difference;
+}
 
 
 function createTemplateCache() {
@@ -24,16 +42,19 @@ function createTemplateCache() {
         .pipe(gulp.dest(config.temp));
 }
 
-
+function cleanTemplateCache(done) {
+    var files = [].concat(config.temp + config.templateCache.file);
+    _clean(files, done);
+}
 
 
 function optimize() {
     _log('Optimizing the js, css, and html');
 
     // Filters are named for the gulp-useref path
-    // var cssFilter = $.filter('**/*.css', {restore: true});
-    // var jsAppFilter = $.filter('**/' + config.optimized.app, {restore: true});
-    // var jslibFilter = $.filter('**/' + config.optimized.lib, {restore: true});
+    var cssFilter = $.filter('**/*.css', {restore: true});
+    var jsAppFilter = $.filter('**/' + config.optimized.app, {restore: true});
+    var jslibFilter = $.filter('**/' + config.optimized.lib, {restore: true});
 
     var templateCache = config.temp + config.templateCache.file;
 
@@ -64,7 +85,7 @@ function serve(isDev) {
         script: config.nodeServer,
         delayTime: 1,
         env: {
-            PORT: port,
+            PORT: 9000,
             NODE_ENV: isDev === true ? 'dev' : 'build'
         },
         watch: [config.server]
@@ -74,14 +95,6 @@ function serve(isDev) {
     }
 
     return $.nodemon(nodeOptions)
-        .on('restart', ['vet'], function(ev) {
-            _log('*** nodemon restarted');
-            _log('files changed:\n' + ev);
-            setTimeout(function() {
-                browserSync.notify('reloading now ...');
-                browserSync.reload({stream: false});
-            }, config.browserReloadDelay);
-        })
         .on('start', function() {
             _log('*** nodemon started');
             _startBrowserSync(isDev === true);
@@ -112,6 +125,25 @@ function wireUpDependencies() {
 }
 
 
+function _clean(path, done) {
+    _log('Cleaning: ' + $.util.colors.blue(path));
+    del(path)
+        .then(function() {
+            done();
+        });
+}
+
+function _log(msg) {
+    if (typeof msg === 'object') {
+        for (var item in msg) {
+            if (msg.hasOwnProperty(item)) {
+                $.util.log($.util.colors.blue(msg[item]));
+            }
+        }
+    } else {
+        $.util.log($.util.colors.blue(msg));
+    }
+}
 // gulp.task('index', function(){
 //     var target = gulp.src('client/index.html');
 //     var sources = gulp.src(['client/**/*.js'],{read:false});
