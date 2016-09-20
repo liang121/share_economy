@@ -22,7 +22,7 @@ var review = require('./routes/reviews');
 /*set router*/
 
 app.use(express.static('../client/'))
-app.use(express.static('../'));
+app.use(express.static('../../'));
 // app.use('/*', express.static('../client/index.html'));
 app.use('/shareeconomy/*', express.static('../client/index.html'));
 app.use('/signIn', express.static('../client/index.html'));
